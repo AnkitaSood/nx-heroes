@@ -1,46 +1,22 @@
 {
-  "npmScope": "demo",
+  "npmScope": "tour-of-heroes",
   "affected": {
     "defaultBase": "master"
   },
   "implicitDependencies": {
-    "package.json": {
-      "dependencies": "*",
-      "devDependencies": "*"
-    },
-    ".eslintrc.json": "*"
-  },
-  "tasksRunnerOptions": {
-    "default": {
-      "runner": "@nrwl/nx-cloud",
-      "options": {
-        "cacheableOperations": [
-          "build",
-          "lint",
-          "test",
-          "e2e"
-        ],
-        "accessToken": "ZDc4MzdhYTQtYWQ1OC00NWE2LTlmZTUtZWMxMWZmOTQzYTI4fHJlYWQtd3JpdGU="
-      }
-    }
-  },
-  "targetDependencies": {
-    "build": [
-      {
-        "target": "build",
-        "projects": "dependencies"
-      }
-    ]
+    "angular.json": "*",
+    "package.json": "*",
+    "tslint.json": "*",
+    ".eslintrc.json": "*",
+    "nx.json": "*",
+    "tsconfig.base.json": "*"
   },
   "projects": {
     "tour-of-heroes": {
       "tags": []
     },
     "tour-of-heroes-e2e": {
-      "tags": [],
-      "implicitDependencies": [
-        "tour-of-heroes"
-      ]
+      "tags": []
     }
   }
 }

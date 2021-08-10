@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "ng": "nx",
-    "postinstall": "node ./decorate-angular-cli.js && ngcc --properties es2015 browser module main",
+    "postinstall": "node ./decorate-angular-cli.js",
     "nx": "nx",
     "start": "ng serve",
     "build": "ng build",
@@ -22,18 +22,22 @@
     "format": "nx format:write",
     "format:write": "nx format:write",
     "format:check": "nx format:check",
-    "update": "nx migrate latest",
+    "update": "ng update @nrwl/workspace",
     "workspace-generator": "nx workspace-generator",
     "dep-graph": "nx dep-graph",
-    "help": "nx help"
+    "help": "nx help",
+    "update:check": "ng update",
+    "workspace-schematic": "nx workspace-schematic"
   },
   "private": true,
   "dependencies": {
     "@angular/animations": "^12.1.0",
+    "@angular/cdk": "^12.2.0",
     "@angular/common": "^12.1.0",
     "@angular/compiler": "^12.1.0",
     "@angular/core": "^12.1.0",
     "@angular/forms": "^12.1.0",
+    "@angular/material": "^12.2.0",
     "@angular/platform-browser": "^12.1.0",
     "@angular/platform-browser-dynamic": "^12.1.0",
     "@angular/router": "^12.1.0",

@@ -81,6 +81,10 @@
             "lintFilePatterns": [
               "apps/tour-of-heroes/src/**/*.ts",
               "apps/tour-of-heroes/src/**/*.html"
+            ],
+            "tsConfig": [
+              "apps/tour-of-heroes/tsconfig.app.json",
+              "apps/tour-of-heroes/tsconfig.spec.json"
             ]
           }
         },
@@ -89,7 +93,9 @@
           "outputs": ["coverage/apps/tour-of-heroes"],
           "options": {
             "jestConfig": "apps/tour-of-heroes/jest.config.js",
-            "passWithNoTests": true
+            "passWithNoTests": true,
+            "tsConfig": "apps/tour-of-heroes/tsconfig.spec.json",
+            "karmaConfig": "apps/tour-of-heroes/karma.conf.js"
           }
         }
       }
