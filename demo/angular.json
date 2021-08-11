@@ -1,6 +1,102 @@
 {
   "version": 1,
   "projects": {
+    "data-access-heroes": {
+      "root": "libs/data-access-heroes",
+      "sourceRoot": "libs/data-access-heroes/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/data-access-heroes/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/data-access-heroes"],
+          "options": {
+            "jestConfig": "libs/data-access-heroes/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "feature-dashboard": {
+      "projectType": "library",
+      "root": "libs/feature-dashboard",
+      "sourceRoot": "libs/feature-dashboard/src",
+      "prefix": "tour-of-heroes",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/feature-dashboard"],
+          "options": {
+            "jestConfig": "libs/feature-dashboard/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/feature-dashboard/src/**/*.ts",
+              "libs/feature-dashboard/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "feature-hero-details": {
+      "projectType": "library",
+      "root": "libs/feature-hero-details",
+      "sourceRoot": "libs/feature-hero-details/src",
+      "prefix": "tour-of-heroes",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/feature-hero-details"],
+          "options": {
+            "jestConfig": "libs/feature-hero-details/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/feature-hero-details/src/**/*.ts",
+              "libs/feature-hero-details/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "feature-heroes": {
+      "projectType": "library",
+      "root": "libs/feature-heroes",
+      "sourceRoot": "libs/feature-heroes/src",
+      "prefix": "tour-of-heroes",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/feature-heroes"],
+          "options": {
+            "jestConfig": "libs/feature-heroes/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/feature-heroes/src/**/*.ts",
+              "libs/feature-heroes/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "tour-of-heroes": {
       "projectType": "application",
       "root": "apps/tour-of-heroes",

@@ -14,7 +14,18 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@tour-of-heroes/data-access-heroes": [
+        "libs/shared/data-access-heroes/src/index.ts"
+      ],
+      "@tour-of-heroes/feature-dashboard": [
+        "libs/tour-of-heroes/feature-dashboard/src/index.ts"
+      ],
+      "@tour-of-heroes/feature-hero-details": [
+        "libs/tour-of-heroes/feature-hero-details/src/index.ts"
+      ],
+      "@tour-of-heroes/feature-heroes": ["libs/tour-of-heroes/feature-heroes/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

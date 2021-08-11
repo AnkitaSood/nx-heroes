@@ -12,6 +12,18 @@
     "tsconfig.base.json": "*"
   },
   "projects": {
+    "data-access-heroes": {
+      "tags": []
+    },
+    "feature-dashboard": {
+      "tags": []
+    },
+    "feature-hero-details": {
+      "tags": []
+    },
+    "feature-heroes": {
+      "tags": []
+    },
     "tour-of-heroes": {
       "tags": []
     },
