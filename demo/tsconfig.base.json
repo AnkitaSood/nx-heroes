@@ -18,16 +18,17 @@
       "@shared/data-access-heroes": [
         "libs/shared/data-access-heroes/src/index.ts"
       ],
-      "@shared/models": [
-        "libs/shared/models"
-      ],
+      "@shared/models": ["libs/shared/models"],
       "@toh/feature-dashboard": [
         "libs/tour-of-heroes/feature-dashboard/src/index.ts"
       ],
       "@toh/feature-hero-details": [
         "libs/tour-of-heroes/feature-hero-details/src/index.ts"
       ],
-      "@toh/feature-heroes": ["libs/tour-of-heroes/feature-heroes/src/index.ts"]
+      "@toh/feature-heroes": [
+        "libs/tour-of-heroes/feature-heroes/src/index.ts"
+      ],
+      "@tour-of-heroes/shared-ui-kit": ["libs/shared/ui-kit/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
