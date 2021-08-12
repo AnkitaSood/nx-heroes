@@ -1,21 +1,21 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { DashboardComponent } from '@toh/feature-dashboard';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   {
     path: 'dashboard',
-    loadChildren: () => import('@toh/feature-dashboard').then(m => m.FeatureDashboardModule)
+    component: DashboardComponent
   },
   {
     path: 'detail',
     loadChildren: () => import('@toh/feature-hero-details').then(m => m.FeatureHeroDetailsModule)
   },
-  // { path: 'detail/:id', component: HeroDetailComponent },
   {
     path: 'heroes',
     loadChildren: () => import('@toh/feature-heroes').then(m => m.FeatureHeroesModule)
   },
+  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
 ];
 
 @NgModule({

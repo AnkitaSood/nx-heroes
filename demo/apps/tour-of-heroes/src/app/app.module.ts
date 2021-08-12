@@ -10,6 +10,7 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { DataAccessHeroesModule } from '@shared/data-access-heroes';
+import { FeatureDashboardModule } from '@toh/feature-dashboard';
 
 @NgModule({
   imports: [
@@ -23,7 +24,8 @@ import { DataAccessHeroesModule } from '@shared/data-access-heroes';
     // Remove it when a real server is ready to receive requests.
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
-    )
+    ),
+    FeatureDashboardModule
   ],
   declarations: [
     AppComponent,
