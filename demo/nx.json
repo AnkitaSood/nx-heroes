@@ -13,25 +13,28 @@
   },
   "projects": {
     "data-access-heroes": {
-      "tags": []
+      "tags": ["scope:tour-of-heroes", "type:data-access"]
     },
     "feature-dashboard": {
-      "tags": []
+      "tags": ["scope:tour-of-heroes", "type:feature"]
     },
     "feature-hero-details": {
-      "tags": []
+      "tags": ["scope:tour-of-heroes", "type:feature"]
     },
     "feature-heroes": {
-      "tags": []
+      "tags": ["scope:tour-of-heroes", "type:feature"]
     },
     "shared-ui-kit": {
-      "tags": []
+      "tags": ["scope:tour-of-heroes", "type:ui-kit"]
     },
     "tour-of-heroes": {
-      "tags": []
+      "tags": ["scope:tour-of-heroes", "type:app"]
     },
     "tour-of-heroes-e2e": {
       "tags": []
+    },
+    "feature-hero-search": {
+      "tags": ["scope:tour-of-heroes", "type:feature"]
     }
   }
 }

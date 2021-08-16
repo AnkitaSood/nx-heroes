@@ -246,6 +246,31 @@
           }
         }
       }
+    },
+    "feature-hero-search": {
+      "projectType": "library",
+      "root": "libs/tour-of-heroes/feature-hero-search",
+      "sourceRoot": "libs/tour-of-heroes/feature-hero-search/src",
+      "prefix": "tour-of-heroes",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/tour-of-heroes/feature-hero-search"],
+          "options": {
+            "jestConfig": "libs/tour-of-heroes/feature-hero-search/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/tour-of-heroes/feature-hero-search/src/**/*.ts",
+              "libs/tour-of-heroes/feature-hero-search/src/**/*.html"
+            ]
+          }
+        }
+      }
     }
   },
   "cli": {

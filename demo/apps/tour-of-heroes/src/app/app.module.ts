@@ -11,6 +11,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DataAccessHeroesModule } from '@shared/data-access-heroes';
 import { FeatureDashboardModule } from '@toh/feature-dashboard';
+import {FeatureHeroSearchModule} from "@toh/feature-hero-search";
+import {HeaderModule} from "@toh/shared-ui-kit";
 
 @NgModule({
   imports: [
@@ -25,7 +27,9 @@ import { FeatureDashboardModule } from '@toh/feature-dashboard';
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
     ),
-    FeatureDashboardModule
+    FeatureDashboardModule,
+    FeatureHeroSearchModule,
+    HeaderModule
   ],
   declarations: [
     AppComponent,
