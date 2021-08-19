@@ -26,14 +26,18 @@ export class HeroDetailComponent {
     private location: Location
   ) {}
 
+  ngOnInit(): void {
+    this.heroService.loadHeroes();
+  }
+
   goBack(): void {
     this.location.back();
   }
 
   save(hero: Hero): void {
     if (hero) {
-      this.heroService.updateHero(hero)
-        .subscribe(() => this.goBack());
+      // this.heroService.updateHero(hero)
+      //   .subscribe(() => this.goBack());
     }
   }
 }

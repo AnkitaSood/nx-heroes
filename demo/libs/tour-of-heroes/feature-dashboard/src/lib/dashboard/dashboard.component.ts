@@ -11,9 +11,13 @@ import { map } from 'rxjs/operators';
 })
 export class DashboardComponent {
 
-  heroes$: Observable<Hero[]> = this.heroService.getHeroes().pipe(
-    map(heroes => heroes.slice(0, 4))
+  heroes$: Observable<Hero[]> = this.heroService.state$.pipe(
+    map(heroState => heroState?.heroes.slice(0, 4))
   );
 
   constructor(private heroService: HeroService) { }
+
+  ngOnInit() {
+    this.heroService.loadHeroes();
+  }
 }

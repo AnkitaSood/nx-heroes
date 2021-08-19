@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { RouterModule, Routes } from '@angular/router';
-import { DataAccessHeroesModule } from '@shared/data-access-heroes';
 import {CardModule} from "@toh/shared-ui-kit";
 
 const routes: Routes = [
@@ -13,7 +12,6 @@ const routes: Routes = [
   imports: [
     CommonModule,
     RouterModule,
-    DataAccessHeroesModule,
     RouterModule.forChild(routes),
     CardModule,
   ],
