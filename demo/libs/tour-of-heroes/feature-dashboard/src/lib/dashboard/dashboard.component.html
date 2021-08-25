@@ -1,8 +1,9 @@
 <h2>Top Heroes</h2>
-<div class="heroes-menu">
+<!--<div class="heroes-menu">
   <a *ngFor="let hero of heroes$ | async"
-      routerLink="/detail/{{hero.id}}">
-      {{hero.name}}
+     routerLink="/detail/{{hero.id}}">
+    {{hero.name}}
   </a>
-</div>
-<tour-of-heroes-card></tour-of-heroes-card>
+</div>-->
+
+<tour-of-heroes-card [hero]="hero" *ngFor="let hero of heroes$ | async"></tour-of-heroes-card>

@@ -12,10 +12,6 @@ import {map} from "rxjs/operators";
 })
 export class HeroesComponent {
 
-  // heroes$: Observable<Hero[]> = this.heroService.state$.pipe(
-  //   map(heroState => heroState.heroes)
-  // )
-
   heroes$: Observable<Hero[]> = this.heroService.pluckStateProperty('heroes')
 
   constructor(private heroService: HeroService) { }
