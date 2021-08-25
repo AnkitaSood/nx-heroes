@@ -1,7 +1,6 @@
 import {forwardRef, ModuleWithProviders, NgModule} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeroService } from './hero.service';
-import {StateService} from "./state.service";
 import {NG_VALUE_ACCESSOR} from "@angular/forms";
 
 @NgModule({
