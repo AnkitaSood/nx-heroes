@@ -1,5 +1,5 @@
-<h1>{{title}}</h1>
-<nav>
-  <a routerLink="/dashboard">Dashboard</a>
-  <a routerLink="/heroes">Heroes</a>
+<nav mat-tab-nav-bar backgroundColor="primary">
+  <a mat-tab-link  *ngFor="let navLink of navLinks" [routerLink]="navLink.link"
+     (click)="activeLink = navLink.link"
+     [active]="activeLink == navLink.link"> {{navLink.label}} </a>
 </nav>
