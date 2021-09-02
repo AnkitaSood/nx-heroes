@@ -69,7 +69,7 @@ export class HeroService extends StateService<HeroState> {
   addHero(hero: Hero): void {
     this.http.post<Hero>(this.heroesUrl, hero, this.httpOptions).pipe(
       catchError(this.handleError<Hero>('addHero'))
-    ).subscribe(user => {
+    ).subscribe(hero => {
       const stateCopy = this.getStateCopy();
       const heroes = [...stateCopy.heroes, hero];
       this.setState({ heroes });
@@ -81,9 +81,9 @@ export class HeroService extends StateService<HeroState> {
     const url = `${this.heroesUrl}/${id}`;
     this.http.delete<Hero>(url, this.httpOptions).pipe(
       catchError(this.handleError<Hero>('deleteHero'))
-    ).subscribe(hero => {
+    ).subscribe(() => {
       const stateCopy = this.getStateCopy();
-      const heroes = stateCopy.heroes.filter(h => h.id !== hero.id)
+      const heroes = stateCopy.heroes.filter(h => h.id !== id)
       this.setState({ heroes });
     })
   }
