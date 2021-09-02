@@ -5,7 +5,7 @@
   <input id="new-hero" #heroName />
 
   <!-- (click) passes input value to add() and then clears the input -->
-  <button class="add-button" (click)="add(heroName.value); heroName.value=''">
+  <button mat-raised-button color="primary" class="add-button" (click)="add(heroName.value); heroName.value=''">
     Add hero
   </button>
 </div>
@@ -15,7 +15,8 @@
     <a routerLink="/detail/{{hero.id}}">
       <span class="badge">{{hero.id}}</span> {{hero.name}}
     </a>
-    <button class="delete" title="delete hero"
-      (click)="delete(hero)">x</button>
+    <button mat-mini-fab color="primary" class="delete" aria-label="Delete Hero" (click)="delete(hero)">
+      <mat-icon>person_remove</mat-icon>
+    </button>
   </li>
 </ul>

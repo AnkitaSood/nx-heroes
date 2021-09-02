@@ -1,5 +1,5 @@
 import {BehaviorSubject, Observable} from "rxjs";
-import {map} from "rxjs/operators";
+import {filter, map} from "rxjs/operators";
 import {Injectable} from "@angular/core";
 
 /*
@@ -22,6 +22,7 @@ export abstract class StateService<T> {
  */
   pluckStateProperty<K extends keyof T>(propertyName: K): Observable<T[K]> {
     return this.state$.pipe(
+      filter( state => !!state),
       map(state => state[propertyName])
     )
   }
