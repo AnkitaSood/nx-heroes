@@ -9,10 +9,10 @@ import { InMemoryDataService } from './in-memory-data.service';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
-import {DataAccessHeroesModule, HeroService} from '@shared/data-access-heroes';
+import {DataAccessHeroesModule} from '@shared/data-access-heroes';
 import { FeatureDashboardModule } from '@toh/feature-dashboard';
-import {FeatureHeroSearchModule} from "@toh/feature-hero-search";
-import {HeaderModule} from "@toh/shared-ui-kit";
+import {HeaderModule} from "@toh/feature-header";
+
 
 @NgModule({
   imports: [
@@ -28,7 +28,6 @@ import {HeaderModule} from "@toh/shared-ui-kit";
       InMemoryDataService, { dataEncapsulation: false }
     ),
     FeatureDashboardModule,
-    FeatureHeroSearchModule,
     HeaderModule
   ],
   declarations: [

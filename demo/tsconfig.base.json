@@ -25,12 +25,15 @@
       "@toh/feature-hero-details": [
         "libs/tour-of-heroes/feature-hero-details/src/index.ts"
       ],
+      "@toh/feature-hero-search": [
+        "libs/tour-of-heroes/feature-hero-search/src/index.ts"
+      ],
       "@toh/feature-heroes": [
         "libs/tour-of-heroes/feature-heroes/src/index.ts"
       ],
       "@toh/shared-ui-kit": ["libs/shared/ui-kit/src/index.ts"],
-      "@toh/feature-hero-search": [
-        "libs/tour-of-heroes/feature-hero-search/src/index.ts"
+      "@toh/feature-header": [
+        "libs/tour-of-heroes/feature-header/src/index.ts"
       ]
     }
   },

@@ -4,6 +4,12 @@
   <label for="new-hero">Hero name: </label>
   <input id="new-hero" #heroName />
 
+  <label for="new-hero-superpowers">Hero super powers: </label>
+  <input id="new-hero-superpowers" placeholder="eg. flying etc" #heroSuperPowers />
+
+  <label for="new-hero-category">Hero Category: </label>
+  <input id="new-hero-category"  placeholder="eg. DC, Marvel etc" #heroCategory />
+
   <!-- (click) passes input value to add() and then clears the input -->
   <button mat-raised-button color="primary" class="add-button" (click)="add(heroName.value); heroName.value=''">
     Add hero

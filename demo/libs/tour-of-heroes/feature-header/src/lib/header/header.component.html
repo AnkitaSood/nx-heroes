@@ -2,4 +2,6 @@
   <a mat-tab-link  *ngFor="let navLink of navLinks" [routerLink]="navLink.link"
      (click)="activeLink = navLink.link"
      [active]="activeLink == navLink.link"> {{navLink.label}} </a>
+
+  <app-hero-search></app-hero-search>
 </nav>

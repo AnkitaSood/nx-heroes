@@ -21,6 +21,9 @@
     "feature-hero-details": {
       "tags": ["scope:tour-of-heroes", "type:feature"]
     },
+    "feature-hero-search": {
+      "tags": ["scope:tour-of-heroes", "type:feature"]
+    },
     "feature-heroes": {
       "tags": ["scope:tour-of-heroes", "type:feature"]
     },
@@ -33,8 +36,8 @@
     "tour-of-heroes-e2e": {
       "tags": []
     },
-    "feature-hero-search": {
-      "tags": ["scope:tour-of-heroes", "type:feature"]
+    "tour-of-heroes-feature-header": {
+      "tags": []
     }
   }
 }
