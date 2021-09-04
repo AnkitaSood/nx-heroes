@@ -22,6 +22,9 @@
       "@toh/feature-dashboard": [
         "libs/tour-of-heroes/feature-dashboard/src/index.ts"
       ],
+      "@toh/feature-header": [
+        "libs/tour-of-heroes/feature-header/src/index.ts"
+      ],
       "@toh/feature-hero-details": [
         "libs/tour-of-heroes/feature-hero-details/src/index.ts"
       ],
@@ -32,8 +35,8 @@
         "libs/tour-of-heroes/feature-heroes/src/index.ts"
       ],
       "@toh/shared-ui-kit": ["libs/shared/ui-kit/src/index.ts"],
-      "@toh/feature-header": [
-        "libs/tour-of-heroes/feature-header/src/index.ts"
+      "@tour-of-heroes/tour-of-heroes/feature-add-hero": [
+        "libs/tour-of-heroes/feature-add-hero/src/index.ts"
       ]
     }
   },

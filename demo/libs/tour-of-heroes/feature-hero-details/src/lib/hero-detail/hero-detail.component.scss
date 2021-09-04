@@ -1,3 +1,15 @@
-/* HeroDetailComponent's private CSS styles */
+:host {
+  display: block;
+
+  .mat-form-field {
+    display: block;
+  }
+
+  .btns {
+    display: flex;
+    gap: 1rem;
+    text-transform: capitalize;
+  }
+}
 
 

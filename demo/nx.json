@@ -36,6 +36,9 @@
     "tour-of-heroes-e2e": {
       "tags": []
     },
+    "tour-of-heroes-feature-add-hero": {
+      "tags": []
+    },
     "tour-of-heroes-feature-header": {
       "tags": []
     }

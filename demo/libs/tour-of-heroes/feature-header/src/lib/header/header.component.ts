@@ -12,7 +12,7 @@ export class HeaderComponent {
   },
     {
       link: '/heroes',
-      label: 'Heroes'
+      label: 'Configure'
     }]
   activeLink= this.navLinks[0].link;
 }

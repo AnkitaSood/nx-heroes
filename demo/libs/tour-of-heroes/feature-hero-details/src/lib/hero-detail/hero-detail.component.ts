@@ -36,8 +36,11 @@ export class HeroDetailComponent {
 
   save(hero: Hero): void {
     if (hero) {
-      // this.heroService.updateHero(hero)
-      //   .subscribe(() => this.goBack());
+      this.heroService.updateHero(hero);
     }
+  }
+
+  delete(hero: Hero): void {
+    this.heroService.deleteHero(hero.id);
   }
 }

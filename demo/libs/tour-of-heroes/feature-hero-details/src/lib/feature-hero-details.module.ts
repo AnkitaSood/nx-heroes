@@ -5,6 +5,7 @@ import { DataAccessHeroesModule } from '@shared/data-access-heroes';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
+import {MatInputModule} from "@angular/material/input";
 
 const routes: Routes = [
   { path: ':id', component: HeroDetailComponent },
@@ -16,7 +17,8 @@ const routes: Routes = [
     DataAccessHeroesModule,
     FormsModule,
     RouterModule.forChild(routes),
-    MatButtonModule
+    MatButtonModule,
+    MatInputModule
   ],
   declarations: [HeroDetailComponent],
   exports: [HeroDetailComponent]

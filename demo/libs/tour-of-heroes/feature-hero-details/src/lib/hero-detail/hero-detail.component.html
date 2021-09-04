@@ -1,10 +1,26 @@
 <ng-container *ngIf="hero$ | async as hero">
-  <h2>{{hero.name | uppercase}} Details</h2>
-  <div><span>id: </span>{{hero.id}}</div>
-  <div>
-    <label for="hero-name">Hero name: </label>
-    <input id="hero-name" [(ngModel)]="hero.name" placeholder="Hero name"/>
+  <h1 class="mat-h1">{{hero.name | uppercase}} Details</h1>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Hero name:</mat-label>
+      <input matInput required [(ngModel)]="hero.name" placeholder="Hero name" [value]="hero.name">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Hero Super Powers:</mat-label>
+      <input matInput required [(ngModel)]="hero.superPowers" placeholder="Hero superpowers" [value]="hero.superPowers.toString()">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Hero Category:</mat-label>
+      <input matInput required [(ngModel)]="hero.category" placeholder="Hero category" [value]="hero.category.toString()">
+    </mat-form-field>
+
+  <div class="btns">
+    <button mat-stroked-button color='primary' (click)="goBack()">go back</button>
+    <button mat-raised-button color='accent' (click)="delete(hero)">Delete
+    </button>
+    <button mat-raised-button color='primary' (click)="save(hero)" [disabled]="!hero.name">save</button>
+
   </div>
-  <button mat-stroked-button color='primary' (click)="goBack()">go back</button>
-  <button mat-raised-button color='primary' (click)="save(hero)">save</button>
 </ng-container>

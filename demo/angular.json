@@ -272,6 +272,31 @@
         }
       }
     },
+    "tour-of-heroes-feature-add-hero": {
+      "projectType": "library",
+      "root": "libs/tour-of-heroes/feature-add-hero",
+      "sourceRoot": "libs/tour-of-heroes/feature-add-hero/src",
+      "prefix": "tour-of-heroes",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/tour-of-heroes/feature-add-hero"],
+          "options": {
+            "jestConfig": "libs/tour-of-heroes/feature-add-hero/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/tour-of-heroes/feature-add-hero/src/**/*.ts",
+              "libs/tour-of-heroes/feature-add-hero/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "tour-of-heroes-feature-header": {
       "projectType": "library",
       "root": "libs/tour-of-heroes/feature-header",
