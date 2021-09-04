@@ -1,9 +1,3 @@
-<h2>Top Heroes</h2>
-<!--<div class="heroes-menu">
-  <a *ngFor="let hero of heroes$ | async"
-     routerLink="/detail/{{hero.id}}">
-    {{hero.name}}
-  </a>
-</div>-->
+<h1>Favorite Heroes</h1>
 
 <tour-of-heroes-card [hero]="hero" *ngFor="let hero of heroes$ | async"></tour-of-heroes-card>

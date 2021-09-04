@@ -1,4 +1,15 @@
+@use '~@angular/material' as mat;
+
 :host {
   display: block;
   cursor: pointer;
+
+  .icon-fav {
+    vertical-align: middle;
+    color:  map-get(mat.$pink-palette, 700);
+  }
+
+  .mat-card-content {
+    text-transform: capitalize;
+  }
 }

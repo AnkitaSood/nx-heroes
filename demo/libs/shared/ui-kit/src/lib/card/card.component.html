@@ -1,7 +1,7 @@
 <mat-card [routerLink]="['/detail',hero.id]">
   <mat-card-header>
     <mat-card-title>
-      {{hero.name}}
+     <mat-icon class="icon-fav" *ngIf="hero.isFavHero">favorite</mat-icon> {{hero.name}}
     </mat-card-title>
     <mat-card-subtitle>Category: {{hero.category}}</mat-card-subtitle>
   </mat-card-header>
