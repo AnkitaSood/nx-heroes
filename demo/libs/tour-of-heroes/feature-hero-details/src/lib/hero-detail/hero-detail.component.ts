@@ -4,9 +4,10 @@ import { Location } from '@angular/common';
 
 import { Hero } from '@shared/models';
 import { HeroService } from '@shared/data-access-heroes';
-import { map } from 'rxjs/operators';
+import { map, tap } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-hero-detail',
@@ -15,6 +16,8 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 })
 export class HeroDetailComponent {
   hero$: Observable<Hero> = this.route.data.pipe(map((data) => data.hero));
+
+  isFavHeroControl = new FormControl();
 
   constructor(
     private route: ActivatedRoute,

@@ -16,6 +16,8 @@
       <input matInput required [(ngModel)]="hero.category" placeholder="Hero category" [value]="hero.category.toString()">
     </mat-form-field>
 
+    <mat-checkbox color="primary" [(ngModel)]="hero.isFavHero">One of your favorites?</mat-checkbox>
+
   <div class="btns">
     <button mat-stroked-button color='primary' (click)="goBack()">go back</button>
     <button mat-raised-button color='accent' (click)="delete(hero)">Delete
