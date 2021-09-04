@@ -4,31 +4,24 @@ import { Location } from '@angular/common';
 
 import { Hero } from '@shared/models';
 import { HeroService } from '@shared/data-access-heroes';
-import { switchMap } from 'rxjs/operators';
-import {Observable} from "rxjs";
+import { map } from 'rxjs/operators';
+import { Observable } from 'rxjs';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-hero-detail',
   templateUrl: './hero-detail.component.html',
-  styleUrls: [ './hero-detail.component.scss' ]
+  styleUrls: ['./hero-detail.component.scss'],
 })
 export class HeroDetailComponent {
-  hero$: Observable<Hero> = this.route.paramMap.pipe(
-    switchMap(params => {
-      const id = params.get('id')!;
-      return this.heroService.getHero(+id);
-    })
-  )
+  hero$: Observable<Hero> = this.route.data.pipe(map((data) => data.hero));
 
   constructor(
     private route: ActivatedRoute,
     private heroService: HeroService,
-    private location: Location
+    private location: Location,
+    private snackbar: MatSnackBar
   ) {}
-
-  ngOnInit(): void {
-    this.heroService.loadHeroes();
-  }
 
   goBack(): void {
     this.location.back();
@@ -37,6 +30,7 @@ export class HeroDetailComponent {
   save(hero: Hero): void {
     if (hero) {
       this.heroService.updateHero(hero);
+      this.snackbar.open('Updated hero successfully!');
     }
   }
 

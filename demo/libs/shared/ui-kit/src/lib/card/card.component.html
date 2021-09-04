@@ -1,4 +1,4 @@
-<mat-card [routerLink]="['/detail',hero.id]">
+<mat-card routerLink="/detail" [queryParams]="{ id: hero.id }">
   <mat-card-header>
     <mat-card-title>
      <mat-icon class="icon-fav" *ngIf="hero.isFavHero">favorite</mat-icon> {{hero.name}}

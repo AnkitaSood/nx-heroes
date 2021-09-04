@@ -5,21 +5,25 @@ import { DashboardComponent } from '@toh/feature-dashboard';
 const routes: Routes = [
   {
     path: 'dashboard',
-    component: DashboardComponent
+    component: DashboardComponent,
   },
   {
     path: 'detail',
-    loadChildren: () => import('@toh/feature-hero-details').then(m => m.FeatureHeroDetailsModule)
+    loadChildren: () =>
+      import('@toh/feature-hero-details').then(
+        (m) => m.FeatureHeroDetailsModule
+      ),
   },
   {
     path: 'heroes',
-    loadChildren: () => import('@toh/feature-heroes').then(m => m.FeatureHeroesModule)
+    loadChildren: () =>
+      import('@toh/feature-heroes').then((m) => m.FeatureHeroesModule),
   },
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
 ];
 
 @NgModule({
-  imports: [ RouterModule.forRoot(routes) ],
-  exports: [ RouterModule ]
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule],
 })
 export class AppRoutingModule {}

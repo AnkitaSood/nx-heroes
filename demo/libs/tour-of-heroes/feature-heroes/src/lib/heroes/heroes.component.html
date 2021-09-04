@@ -2,7 +2,7 @@
 
 <ul class="heroes">
   <li *ngFor="let hero of heroes$ | async">
-    <a routerLink="/detail/{{hero.id}}">
+    <a routerLink="/detail" [queryParams]="{ id: hero.id }">
       {{hero.name}}
     </a>
     <button mat-mini-fab color="primary" class="delete" aria-label="Delete Hero" (click)="delete(hero)">

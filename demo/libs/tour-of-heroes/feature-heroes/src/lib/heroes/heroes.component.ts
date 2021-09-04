@@ -2,19 +2,18 @@ import { Component, OnInit } from '@angular/core';
 
 import { Hero } from '@shared/models';
 import { HeroService } from '@shared/data-access-heroes';
-import {BehaviorSubject, Observable} from "rxjs";
-import {map} from "rxjs/operators";
+import { BehaviorSubject, Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-heroes',
   templateUrl: './heroes.component.html',
-  styleUrls: ['./heroes.component.scss']
+  styleUrls: ['./heroes.component.scss'],
 })
 export class HeroesComponent {
+  heroes$: Observable<Hero[]> = this.heroService.pluckStateProperty('heroes');
 
-  heroes$: Observable<Hero[]> = this.heroService.pluckStateProperty('heroes')
-
-  constructor(private heroService: HeroService) { }
+  constructor(private heroService: HeroService) {}
 
   ngOnInit(): void {
     this.heroService.loadHeroes();
@@ -23,5 +22,4 @@ export class HeroesComponent {
   delete(hero: Hero): void {
     this.heroService.deleteHero(hero.id);
   }
-
 }
