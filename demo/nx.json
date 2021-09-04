@@ -30,6 +30,9 @@
     "shared-ui-kit": {
       "tags": ["scope:tour-of-heroes", "type:ui-kit"]
     },
+    "stories": {
+      "tags": []
+    },
     "tour-of-heroes": {
       "tags": ["scope:tour-of-heroes", "type:app"]
     },

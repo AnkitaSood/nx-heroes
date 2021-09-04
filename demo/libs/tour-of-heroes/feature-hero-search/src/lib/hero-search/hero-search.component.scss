@@ -1,4 +1,9 @@
 /* HeroSearch private styles */
 :host {
+ display: inline-flex;
+  margin-left: auto;
 
+  .field-search {
+    width: 20rem;
+  }
 }
