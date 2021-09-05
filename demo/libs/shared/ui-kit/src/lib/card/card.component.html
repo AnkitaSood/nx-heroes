@@ -1,3 +1,4 @@
+<ng-container *ngIf="hero else notfound">
 <mat-card routerLink="/detail" [queryParams]="{ id: hero.id }">
   <mat-card-header>
     <mat-card-title>
@@ -9,3 +10,7 @@
     Super Powers: {{hero.superPowers}}
   </mat-card-content>
 </mat-card>
+</ng-container>
+<ng-template #notfound>
+  <p>Hero not found</p>
+</ng-template>

@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import {
   DataAccessHeroesModule,
-  HeroResolver,
 } from '@shared/data-access-heroes';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
@@ -19,7 +18,6 @@ const routes: Routes = [
   {
     path: '',
     component: HeroDetailComponent,
-    resolve: { hero: HeroResolver },
   },
 ];
 
