@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 
-import {combineLatest, Observable} from 'rxjs';
+import {Observable} from 'rxjs';
 
 import {Hero} from '@shared/models';
 import {HeroService} from '@shared/data-access-heroes';

@@ -8,11 +8,15 @@ import {Component} from '@angular/core';
 export class HeaderComponent {
   navLinks = [{
     link: '/dashboard',
-    label: 'Dashboard'
+    label: 'Favorites'
   },
     {
       link: '/heroes',
       label: 'Configure'
+    },
+    {
+      link: '/add-new',
+      label: 'Add Hero'
     }]
   activeLink= this.navLinks[0].link;
 }

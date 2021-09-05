@@ -40,10 +40,11 @@
       "tags": []
     },
     "tour-of-heroes-feature-add-hero": {
-      "tags": []
+      "tags": ["scope:tour-of-heroes", "type:feature"]
+
     },
     "tour-of-heroes-feature-header": {
-      "tags": []
+      "tags": ["scope:tour-of-heroes", "type:feature"]
     }
   }
 }

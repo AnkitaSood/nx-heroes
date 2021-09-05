@@ -1,9 +1,19 @@
-/* HeroSearch private styles */
+@import "libs/shared/styles/colors";
 :host {
  display: inline-flex;
   margin-left: auto;
 
   .field-search {
     width: 20rem;
+    height: 3rem;
+
+    .mat-input-element {
+      color: $light-primary-text;
+      caret-color: $light-primary-text;
+    }
+
+    mat-label {
+      color: $light-primary-text;
+    }
   }
 }
