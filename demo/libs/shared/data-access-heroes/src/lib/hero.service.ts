@@ -43,6 +43,11 @@ export class HeroService extends StateService<HeroState> {
           return null;
         }
         return heroState?.heroes.find((h) => h.id === id);
+      }),
+      tap((hero) => {
+        if (!hero) {
+          this.loadHeroes();
+        }
       })
     );
   }
