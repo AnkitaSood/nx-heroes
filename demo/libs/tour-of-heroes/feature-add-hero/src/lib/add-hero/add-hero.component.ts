@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Hero} from "@shared/models";
 import {HeroService} from "@shared/data-access-heroes";
+import {MatSnackBar} from "@angular/material/snack-bar";
 
 @Component({
   selector: 'tour-of-heroes-add-hero',
@@ -9,18 +10,20 @@ import {HeroService} from "@shared/data-access-heroes";
 })
 export class AddHeroComponent implements OnInit {
 
-  constructor(private heroService: HeroService) {
+  hero: Hero = {category: [], id: 0, isFavHero: false, name: "", superPowers: []}
+
+  constructor(private heroService: HeroService,
+              private snackbar: MatSnackBar
+  ) {
   }
 
   ngOnInit(): void {
+    this.heroService.loadHeroes();
   }
 
-  add(name: string): void {
-    name = name.trim();
-    if (!name) {
-      return;
-    }
-    this.heroService.addHero({name} as Hero);
+  add(): void {
+    this.heroService.addHero(this.hero);
+    this.snackbar.open(`${this.hero.name.toUpperCase()} details saved successfully!`);
   }
 
 }

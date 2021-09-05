@@ -2,19 +2,20 @@
   <h1 class="mat-h1">{{hero.name}} Details</h1>
 
   <mat-form-field appearance="outline">
-    <mat-label>Hero name:</mat-label>
-    <input matInput required [(ngModel)]="hero.name" placeholder="Hero name" [value]="hero.name">
+    <mat-label>Name</mat-label>
+    <input matInput required [(ngModel)]="hero.name" placeholder="Hero name" [value]="hero.name" type="text">
   </mat-form-field>
 
   <mat-form-field appearance="outline">
-    <mat-label>Hero Super Powers:</mat-label>
-    <input matInput required [(ngModel)]="hero.superPowers" placeholder="Hero superpowers"
+    <mat-label>Super Powers</mat-label>
+    <input matInput required [(ngModel)]="hero.superPowers" placeholder="Hero superpowers" type="text"
            [value]="hero.superPowers.toString()">
   </mat-form-field>
 
   <mat-form-field appearance="outline">
-    <mat-label>Hero Category:</mat-label>
-    <input matInput required [(ngModel)]="hero.category" placeholder="Hero category" [value]="hero.category.toString()">
+    <mat-label>Category</mat-label>
+    <input matInput required [(ngModel)]="hero.category" placeholder="Hero category" [value]="hero.category.toString()"
+           type="text">
   </mat-form-field>
 
     <mat-checkbox color="primary" [(ngModel)]="hero.isFavHero">One of your favorites?</mat-checkbox>

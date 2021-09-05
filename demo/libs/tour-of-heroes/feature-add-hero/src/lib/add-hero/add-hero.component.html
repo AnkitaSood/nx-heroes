@@ -1,15 +1,34 @@
-<div>
-  <label for="new-hero">Hero name: </label>
-  <input id="new-hero" #heroName/>
+<h1 class="mat-h1">Add New Hero</h1>
+<form #addHeroForm='ngForm' name="addHeroForm" class="form-add-hero" (ngSubmit)="add()">
+  <mat-form-field appearance="outline">
+    <mat-label>Name</mat-label>
+    <input matInput required placeholder="eg. Wonder Woman" type="text" name="name" autocomplete="off"
+           [(ngModel)]="hero.name">
+  </mat-form-field>
 
-  <label for="new-hero-superpowers">Hero super powers: </label>
-  <input id="new-hero-superpowers" placeholder="eg. flying etc" #heroSuperPowers/>
 
-  <label for="new-hero-category">Hero Category: </label>
-  <input id="new-hero-category" placeholder="eg. DC, Marvel etc" #heroCategory/>
+  <mat-form-field appearance="outline">
+    <mat-label>Super Powers</mat-label>
+    <input type="text" matInput placeholder="eg. Super human strength" name="superPowers"
+           [(ngModel)]="hero.superPowers">
+  </mat-form-field>
 
-  <!-- (click) passes input value to add() and then clears the input -->
-  <button mat-raised-button color="primary" class="add-button" (click)="add(heroName.value); heroName.value=''">
-    Add hero
-  </button>
-</div>
+  <mat-form-field appearance="outline">
+    <mat-label>Category</mat-label>
+    <input type="text" matInput placeholder="eg. DC, Marvel etc" name="category" [(ngModel)]="hero.category">
+  </mat-form-field>
+
+  <div class="form-radio-options">
+    <label id="fav-hero-label" class="label-radio mat-h3">One of your favorites?</label>
+    <mat-radio-group aria-labelledby="fav-hero-label" [(ngModel)]="hero.isFavHero" name="isFavHero">
+      <mat-radio-button value="true">Yes</mat-radio-button>
+      <mat-radio-button value="false">No</mat-radio-button>
+    </mat-radio-group>
+  </div>
+
+  <div class="btns">
+    <button mat-raised-button color='accent' type="button" (click)="addHeroForm.reset()">Reset
+    </button>
+    <button mat-raised-button color='primary' type="submit" [disabled]="addHeroForm.invalid">Save</button>
+  </div>
+</form>

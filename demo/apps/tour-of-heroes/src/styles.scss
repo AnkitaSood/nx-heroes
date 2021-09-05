@@ -26,6 +26,10 @@ body {
 /*
   Custom material components overrides
 */
+.mat-form-field-wrapper {
+  padding-bottom: 0;
+}
+
 .field-slim {
   &.mat-form-field-appearance-outline {
 
