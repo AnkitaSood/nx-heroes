@@ -27,7 +27,9 @@
     "dep-graph": "nx dep-graph",
     "help": "nx help",
     "update:check": "ng update",
-    "workspace-schematic": "nx workspace-schematic"
+    "workspace-schematic": "nx workspace-schematic",
+    "storybook": "nx run stories:storybook",
+    "build-storybook": "nx run stories:build-storybook"
   },
   "private": true,
   "dependencies": {
@@ -41,7 +43,7 @@
     "@angular/platform-browser": "^12.1.0",
     "@angular/platform-browser-dynamic": "^12.1.0",
     "@angular/router": "^12.1.0",
-    "@nrwl/angular": "12.6.5",
+    "@nrwl/angular": "12.8.0",
     "angular-in-memory-web-api": "^0.11.0",
     "nx": "^12.6.6",
     "rxjs": "~6.6.0",
@@ -56,15 +58,15 @@
     "@angular/cli": "~12.1.0",
     "@angular/compiler-cli": "^12.1.0",
     "@angular/language-service": "^12.1.0",
-    "@nrwl/cli": "12.6.5",
-    "@nrwl/cypress": "12.6.5",
-    "@nrwl/eslint-plugin-nx": "12.6.5",
-    "@nrwl/jest": "12.6.5",
-    "@nrwl/linter": "12.6.5",
-    "@nrwl/nx-cloud": "latest",
-    "@nrwl/storybook": "^12.8.0",
-    "@nrwl/tao": "12.6.5",
-    "@nrwl/workspace": "12.6.5",
+    "@nrwl/cli": "12.8.0",
+    "@nrwl/cypress": "12.8.0",
+    "@nrwl/eslint-plugin-nx": "12.8.0",
+    "@nrwl/jest": "12.8.0",
+    "@nrwl/linter": "12.8.0",
+    "@nrwl/nx-cloud": "12.3.10",
+    "@nrwl/storybook": "12.8.0",
+    "@nrwl/tao": "12.8.0",
+    "@nrwl/workspace": "12.8.0",
     "@storybook/addon-essentials": "~6.3.0",
     "@storybook/angular": "~6.3.0",
     "@storybook/builder-webpack5": "~6.3.0",
@@ -74,7 +76,7 @@
     "@typescript-eslint/eslint-plugin": "~4.28.3",
     "@typescript-eslint/parser": "~4.28.3",
     "cypress": "^7.3.0",
-    "dotenv": "~10.0.0",
+    "dotenv": "10.0.0",
     "eslint": "7.22.0",
     "eslint-config-prettier": "8.1.0",
     "eslint-plugin-cypress": "^2.10.3",
@@ -86,3 +88,4 @@
     "typescript": "~4.3.5"
   }
 }
+
