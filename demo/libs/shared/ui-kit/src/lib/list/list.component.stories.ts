@@ -1,5 +1,5 @@
-import { moduleMetadata, Story, Meta } from '@storybook/angular';
-import { ListComponent } from './list.component';
+import {moduleMetadata, Story, Meta} from '@storybook/angular';
+import {ListComponent} from './list.component';
 
 export default {
   title: 'Lists',
@@ -17,6 +17,5 @@ const Template: Story<ListComponent> = (args: ListComponent) => ({
 });
 
 
-export const Primary = Template.bind({});
-Primary.args = {
-}
+export const BasicList = Template.bind({});
+BasicList.args = {}
