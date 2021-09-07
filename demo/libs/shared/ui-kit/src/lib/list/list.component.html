@@ -1,10 +1,22 @@
-<div class="card">
-  <div class="content">
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>
+      <ng-content select="[title]"></ng-content>
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content class=" content">
+
     <div class="front">
-      Front
+      Super Powers:
+      <ng-content select="[details]"></ng-content>
     </div>
     <div class="back">
-      Back!
+      <mat-icon (click)="toggleFavorite()"> favorite</mat-icon>
+      <button mat-mini-fab color="accent" class="delete" aria-label="Delete Hero" (click)="delete()">
+        <mat-icon>person_remove</mat-icon>
+      </button>
     </div>
-  </div>
-</div>
+
+  </mat-card-content>
+</mat-card>
+

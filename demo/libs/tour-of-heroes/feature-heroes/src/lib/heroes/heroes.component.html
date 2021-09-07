@@ -1,14 +1,8 @@
 <h1 class="mat-h1">Heroes</h1>
 
-<ul class="heroes">
-  <li *ngFor="let hero of heroes$ | async">
-    <a routerLink="/detail" [queryParams]="{ id: hero.id }">
-      {{hero.name}}
-    </a>
-    <button mat-mini-fab color="primary" class="delete" aria-label="Delete Hero" (click)="delete(hero)">
-      <mat-icon>person_remove</mat-icon>
-    </button>
-  </li>
-</ul>
-
-<!--<tour-of-heroes-list *ngFor="let hero of heroes$ | async"></tour-of-heroes-list>-->
+<section class="list-columns">
+  <tour-of-heroes-list *ngFor="let hero of heroes$ | async" routerLink="/detail" [queryParams]="{ id: hero.id }">
+    <ng-container title>{{hero.name}}</ng-container>
+    <ng-container details>{{hero.superPowers.toString().split(',').join(', ').trim()}}</ng-container>
+  </tour-of-heroes-list>
+</section>
