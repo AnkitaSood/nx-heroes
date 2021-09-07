@@ -1,7 +1,5 @@
 @use '~@angular/material' as mat;
-
-$light-primary-text: white;
-$dark-primary-text: rgba(black, 0.87);
+@import "variables";
 
 $light-theme-primary-palette: (
   50: #f0e4f0,

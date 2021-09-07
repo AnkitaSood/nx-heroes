@@ -1,8 +1,10 @@
 <h3 class="mat-h3">
   <ng-content select="[title]"></ng-content>
 </h3>
+<mat-divider></mat-divider>
 <section class="content">
   <div class="front">
+    <ng-content select="[content-title]"></ng-content>
     <ng-content select="[details]"></ng-content>
   </div>
   <div class="back">

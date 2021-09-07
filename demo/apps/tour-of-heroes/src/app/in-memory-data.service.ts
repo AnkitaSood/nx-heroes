@@ -43,7 +43,7 @@ export class InMemoryDataService implements InMemoryDbService {
           'immunity',
           'power',
         ],
-        isFavHero: true,
+        isFavHero: false,
       },
       {
         id: 14,
@@ -69,7 +69,7 @@ export class InMemoryDataService implements InMemoryDbService {
         name: 'Cat Woman',
         category: ['DC'],
         superPowers: ['speed', 'balance', 'agility', 'reflexes'],
-        isFavHero: false,
+        isFavHero: true,
       },
       {
         id: 17,
@@ -95,7 +95,7 @@ export class InMemoryDataService implements InMemoryDbService {
           'x-ray vision',
           'enhanced hearing',
         ],
-        isFavHero: true,
+        isFavHero: false,
       },
       {
         id: 20,

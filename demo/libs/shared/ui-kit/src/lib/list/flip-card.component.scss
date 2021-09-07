@@ -1,17 +1,20 @@
 @use '~@angular/material' as mat;
+@import 'libs/shared/styles/variables';
 
 :host {
   @include mat.elevation(2);
   display: block;
   cursor: pointer;
-  width: 10rem;
-  height: 10rem;
+  width: $container-basic;
+  height: $container-basic;
   overflow: hidden;
   text-overflow: ellipsis;
-  background-color: #7b2f82;
-  padding: 1rem;
+  background-color: $container-basic--bg-color;
+  padding: $space-medium;
+  text-transform: capitalize;
 
   .content {
+    margin-top: 0.5rem;
     transition: transform 1s;
     transform-style: preserve-3d;
   }

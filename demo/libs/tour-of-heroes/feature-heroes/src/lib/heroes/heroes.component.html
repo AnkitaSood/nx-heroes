@@ -1,11 +1,13 @@
-<h1 class="mat-h1">Heroes</h1>
+<h1 class="mat-h1">All Heroes</h1>
 
-<section class="list-columns">
+<section class="collection">
   <tour-of-heroes-list *ngFor="let hero of heroes$ | async" routerLink="/detail" [queryParams]="{ id: hero.id }">
     <ng-container title>
       <mat-icon *ngIf="hero.isFavHero" class="icon-fav">favorite</mat-icon>
-      {{hero.name}}</ng-container>
-<!--    <ng-container details>{{hero.superPowers.toString().split(',').join(', ').trim()}}</ng-container>-->
+      {{hero.name}}
+    </ng-container>
+    <h4 content-title> Super Powers:</h4>
+    <ng-container details>{{hero.superPowers.toString().split(',').join(', ').trim()}}</ng-container>
     <ng-container back-content>
       <button mat-mini-fab color="accent" class="fav" aria-label="Fav Hero" (click)="toggleFavorite(hero, $event)">
         <mat-icon class="icon-fav">favorite</mat-icon>
