@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 import { Observable, of, Subject } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
@@ -22,7 +23,7 @@ export class HeroService extends StateService<HeroState> {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
   };
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private router: Router) {
     super();
     this.setState(initialState);
   }
@@ -92,6 +93,7 @@ export class HeroService extends StateService<HeroState> {
         const stateCopy = this.getStateCopy();
         const heroes = stateCopy.heroes.filter((h) => h.id !== id);
         this.setState({ heroes });
+        this.router.navigate(['/dashboard']);
       });
   }
 
