@@ -2,7 +2,17 @@
 
 <section class="list-columns">
   <tour-of-heroes-list *ngFor="let hero of heroes$ | async" routerLink="/detail" [queryParams]="{ id: hero.id }">
-    <ng-container title>{{hero.name}}</ng-container>
-    <ng-container details>{{hero.superPowers.toString().split(',').join(', ').trim()}}</ng-container>
+    <ng-container title>
+      <mat-icon *ngIf="hero.isFavHero" class="icon-fav">favorite</mat-icon>
+      {{hero.name}}</ng-container>
+<!--    <ng-container details>{{hero.superPowers.toString().split(',').join(', ').trim()}}</ng-container>-->
+    <ng-container back-content>
+      <button mat-mini-fab color="accent" class="fav" aria-label="Fav Hero" (click)="toggleFavorite(hero, $event)">
+        <mat-icon class="icon-fav">favorite</mat-icon>
+      </button>
+      <button mat-mini-fab color="accent" class="delete" aria-label="Delete Hero" (click)="delete(hero, $event)">
+        <mat-icon>person_remove</mat-icon>
+      </button>
+    </ng-container>
   </tour-of-heroes-list>
 </section>

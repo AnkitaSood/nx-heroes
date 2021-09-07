@@ -5,7 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { DataAccessHeroesModule } from '@shared/data-access-heroes';
 import {MatButtonModule} from "@angular/material/button";
 import {MatIconModule} from "@angular/material/icon";
-import {ListModule} from "@toh/shared-ui-kit";
+import {FlipCardModule} from "@toh/shared-ui-kit";
 
 const routes: Routes = [
   { path: '', component: HeroesComponent },
@@ -19,7 +19,7 @@ const routes: Routes = [
         RouterModule.forChild(routes),
         MatButtonModule,
         MatIconModule,
-        ListModule
+        FlipCardModule
     ],
   declarations: [HeroesComponent],
   exports: [HeroesComponent]

@@ -23,6 +23,15 @@ body {
   background-color: $light-theme-background;
 }
 
+.error-msg {
+  color: map-get($light-theme-warn-palette, 700);
+}
+
+.icon-fav {
+  vertical-align: middle;
+  color: map-get(mat.$pink-palette, 700);
+}
+
 /*
   Custom material components overrides
 */
@@ -30,6 +39,9 @@ body {
   padding-bottom: 0;
 }
 
+/*
+ Custom material component variants
+*/
 .field-slim {
   &.mat-form-field-appearance-outline {
 

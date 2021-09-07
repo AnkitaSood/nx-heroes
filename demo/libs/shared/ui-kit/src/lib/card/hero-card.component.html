@@ -7,10 +7,11 @@
     <mat-card-subtitle>Category: {{hero.category}}</mat-card-subtitle>
   </mat-card-header>
   <mat-card-content>
-    Super Powers: {{hero.superPowers}}
+    <h4 class="card-content-title">Super Powers: </h4>
+     {{hero.superPowers}}
   </mat-card-content>
 </mat-card>
 </ng-container>
 <ng-template #notfound>
-  <p>Hero not found</p>
+  <p class="error-msg">Hero not found</p>
 </ng-template>

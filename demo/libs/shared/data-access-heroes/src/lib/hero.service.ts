@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Router } from '@angular/router';
 
-import { Observable, of, Subject } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 import { Hero } from '@shared/models';
 import { StateService } from './state.service';
@@ -93,7 +93,7 @@ export class HeroService extends StateService<HeroState> {
         const stateCopy = this.getStateCopy();
         const heroes = stateCopy.heroes.filter((h) => h.id !== id);
         this.setState({ heroes });
-        this.router.navigate(['/dashboard']);
+        this.router.navigate(['/heroes']);
       });
   }
 
@@ -111,8 +111,6 @@ export class HeroService extends StateService<HeroState> {
         this.setState({ heroes });
       });
   }
-
-  private updateHeroEvent$ = new Subject<Hero>();
 
   /**
    * Handle Http operation that failed.

@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CardComponent } from './card.component';
+import { HeroCardComponent } from './hero-card.component';
 import {MatCardModule} from "@angular/material/card";
 import {RouterModule} from "@angular/router";
 import {MatIconModule} from "@angular/material/icon";
 
 @NgModule({
     declarations: [
-        CardComponent
+        HeroCardComponent
     ],
     exports: [
-        CardComponent
+        HeroCardComponent
     ],
     imports: [
         CommonModule,
@@ -19,4 +19,4 @@ import {MatIconModule} from "@angular/material/icon";
         MatIconModule
     ]
 })
-export class CardModule { }
+export class HeroCardModule { }

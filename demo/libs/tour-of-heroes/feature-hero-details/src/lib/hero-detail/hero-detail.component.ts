@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute, ParamMap } from '@angular/router';
+import {ActivatedRoute, ParamMap} from '@angular/router';
 import { Location } from '@angular/common';
 
 import { Hero } from '@shared/models';

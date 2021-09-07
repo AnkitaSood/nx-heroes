@@ -1,15 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ListComponent } from './list.component';
+import { FlipCardComponent } from './flip-card.component';
 import {MatCardModule} from "@angular/material/card";
 import {MatIconModule} from "@angular/material/icon";
 import {MatButtonModule} from "@angular/material/button";
 
 
-
 @NgModule({
   declarations: [
-    ListComponent
+    FlipCardComponent
   ],
   imports: [
     CommonModule,
@@ -18,7 +17,7 @@ import {MatButtonModule} from "@angular/material/button";
     MatButtonModule
   ],
   exports: [
-    ListComponent
+    FlipCardComponent
   ]
 })
-export class ListModule { }
+export class FlipCardModule { }
