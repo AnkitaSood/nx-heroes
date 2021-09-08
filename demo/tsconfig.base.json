@@ -36,8 +36,11 @@
       ],
       "@toh/shared-ui-kit": ["libs/shared/ui-kit/src/index.ts"],
       "@tour-of-heroes/stories": ["libs/stories/src/index.ts"],
-      "@tour-of-heroes/tour-of-heroes/feature-add-hero": [
+      "@toh/feature-add-hero": [
         "libs/tour-of-heroes/feature-add-hero/src/index.ts"
+      ],
+      "@toh/ui-kit-heroes-card": [
+        "libs/tour-of-heroes/ui-kit-heroes-card/src/index.ts"
       ]
     }
   },

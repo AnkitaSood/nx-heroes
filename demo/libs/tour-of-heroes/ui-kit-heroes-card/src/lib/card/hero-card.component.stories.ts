@@ -1,10 +1,8 @@
-import {Story} from '@storybook/angular/types-6-0';
-
 import {HeroCardComponent} from './hero-card.component';
-import {Meta, moduleMetadata} from "@storybook/angular";
+import {Meta, moduleMetadata, Story} from "@storybook/angular";
 import {MatCardModule} from "@angular/material/card";
 import {MatIconModule} from "@angular/material/icon";
-import {Hero} from "../../../../models";
+import {Hero} from "@shared/models";
 
 export default {
   title: 'Cards',

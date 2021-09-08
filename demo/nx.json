@@ -28,7 +28,7 @@
       "tags": ["scope:tour-of-heroes", "type:feature"]
     },
     "shared-ui-kit": {
-      "tags": ["scope:tour-of-heroes", "type:ui-kit"]
+      "tags": ["scope:shared", "type:ui-kit"]
     },
     "stories": {
       "tags": []
@@ -39,11 +39,14 @@
     "tour-of-heroes-e2e": {
       "tags": []
     },
-    "tour-of-heroes-feature-add-hero": {
+    "feature-add-hero": {
       "tags": ["scope:tour-of-heroes", "type:feature"]
     },
-    "tour-of-heroes-feature-header": {
+    "feature-header": {
       "tags": ["scope:tour-of-heroes", "type:feature"]
+    },
+    "ui-kit-heroes-card": {
+      "tags": ["scope:tour-of-heroes", "type:ui-kit"]
     }
   }
 }

@@ -22,7 +22,7 @@ const routes: Routes = [
   {
     path: 'add-new',
     loadChildren: () =>
-      import('@tour-of-heroes/tour-of-heroes/feature-add-hero').then((m) => m.AddHeroModule),
+      import('@toh/feature-add-hero').then((m) => m.AddHeroModule),
   },
   {path: '', redirectTo: '/dashboard', pathMatch: 'full'},
 ];

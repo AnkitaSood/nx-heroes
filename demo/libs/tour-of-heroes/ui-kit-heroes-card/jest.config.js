@@ -1,5 +1,5 @@
 module.exports = {
-  displayName: 'feature-header',
+  displayName: 'ui-kit-heroes-card',
   preset: '../../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
   globals: {
@@ -8,7 +8,7 @@ module.exports = {
       stringifyContentPathRegex: '\\.(html|svg)$',
     },
   },
-  coverageDirectory: '../../../coverage/libs/tour-of-heroes/feature-header',
+  coverageDirectory: '../../../coverage/libs/tour-of-heroes/ui-kit-heroes-card',
   transform: {
     '^.+\\.(ts|js|html)$': 'jest-preset-angular',
   },

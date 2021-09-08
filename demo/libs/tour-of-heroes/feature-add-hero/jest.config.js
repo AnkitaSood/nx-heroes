@@ -1,5 +1,5 @@
 module.exports = {
-  displayName: 'tour-of-heroes-feature-add-hero',
+  displayName: 'feature-add-hero',
   preset: '../../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
   globals: {

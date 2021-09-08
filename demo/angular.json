@@ -359,7 +359,7 @@
         }
       }
     },
-    "tour-of-heroes-feature-add-hero": {
+    "feature-add-hero": {
       "projectType": "library",
       "root": "libs/tour-of-heroes/feature-add-hero",
       "sourceRoot": "libs/tour-of-heroes/feature-add-hero/src",
@@ -384,7 +384,7 @@
         }
       }
     },
-    "tour-of-heroes-feature-header": {
+    "feature-header": {
       "projectType": "library",
       "root": "libs/tour-of-heroes/feature-header",
       "sourceRoot": "libs/tour-of-heroes/feature-header/src",
@@ -404,6 +404,31 @@
             "lintFilePatterns": [
               "libs/tour-of-heroes/feature-header/src/**/*.ts",
               "libs/tour-of-heroes/feature-header/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "ui-kit-heroes-card": {
+      "projectType": "library",
+      "root": "libs/tour-of-heroes/ui-kit-heroes-card",
+      "sourceRoot": "libs/tour-of-heroes/ui-kit-heroes-card/src",
+      "prefix": "tour-of-heroes",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/tour-of-heroes/ui-kit-heroes-card"],
+          "options": {
+            "jestConfig": "libs/tour-of-heroes/ui-kit-heroes-card/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/tour-of-heroes/ui-kit-heroes-card/src/**/*.ts",
+              "libs/tour-of-heroes/ui-kit-heroes-card/src/**/*.html"
             ]
           }
         }
