@@ -41,7 +41,6 @@
     },
     "tour-of-heroes-feature-add-hero": {
       "tags": ["scope:tour-of-heroes", "type:feature"]
-
     },
     "tour-of-heroes-feature-header": {
       "tags": ["scope:tour-of-heroes", "type:feature"]

@@ -19,13 +19,13 @@ export default {
 /*
 * No args passed - hence will display card when data is null
 * */
-export const NoHeroCard: Story = () => ({});
+export const NoHeroCard: Story<HeroCardComponent> = () => ({});
 
 /*
 * Basic mock data being passed as args to show how content gets displayed in the card
 * */
 
-export const BasicHeroCard: Story = (args) => ({
+export const BasicHeroCard: Story<HeroCardComponent> = (args) => ({
   props: {
     ...args
   }

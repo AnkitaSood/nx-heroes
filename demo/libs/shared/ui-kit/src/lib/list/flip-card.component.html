@@ -4,11 +4,12 @@
 <mat-divider></mat-divider>
 <section class="content">
   <div class="front">
-    <ng-content select="[content-title]"></ng-content>
+    <h4>
+      <ng-content select="[content-title]"></ng-content>
+    </h4>
     <ng-content select="[details]"></ng-content>
   </div>
   <div class="back">
     <ng-content select="[back-content]"></ng-content>
   </div>
 </section>
-
