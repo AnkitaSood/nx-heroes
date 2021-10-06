@@ -19,6 +19,9 @@
         "libs/shared/data-access-heroes/src/index.ts"
       ],
       "@shared/models": ["libs/shared/models"],
+      "@tod/data-access-dogs": [
+        "libs/tour-of-dogs/data-access-dogs/src/index.ts"
+      ],
       "@toh/feature-add-hero": [
         "libs/tour-of-heroes/feature-add-hero/src/index.ts"
       ],

@@ -335,7 +335,7 @@
               "vendorChunk": true,
               "extractLicenses": false,
               "sourceMap": true,
-              "namedChunks": true,
+              "namedChunks": true
             }
           },
           "defaultConfiguration": "production"
@@ -374,6 +374,31 @@
           "options": {
             "jestConfig": "apps/tour-of-dogs/jest.config.js",
             "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "tour-of-dogs-data-access-dogs": {
+      "projectType": "library",
+      "root": "libs/tour-of-dogs/data-access-dogs",
+      "sourceRoot": "libs/tour-of-dogs/data-access-dogs/src",
+      "prefix": "tour-of-heroes",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/tour-of-dogs/data-access-dogs"],
+          "options": {
+            "jestConfig": "libs/tour-of-dogs/data-access-dogs/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/tour-of-dogs/data-access-dogs/src/**/*.ts",
+              "libs/tour-of-dogs/data-access-dogs/src/**/*.html"
+            ]
           }
         }
       }

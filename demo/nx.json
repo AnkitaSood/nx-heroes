@@ -42,6 +42,9 @@
     "tour-of-dogs": {
       "tags": ["type:app"]
     },
+    "tour-of-dogs-data-access-dogs": {
+      "tags": ["scope:tour-of-dogs", "type=data-access"]
+    },
     "tour-of-dogs-e2e": {
       "tags": [],
       "implicitDependencies": ["tour-of-dogs"]
