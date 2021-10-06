@@ -22,6 +22,31 @@
         }
       }
     },
+    "feature-add-hero": {
+      "projectType": "library",
+      "root": "libs/tour-of-heroes/feature-add-hero",
+      "sourceRoot": "libs/tour-of-heroes/feature-add-hero/src",
+      "prefix": "tour-of-heroes",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/tour-of-heroes/feature-add-hero"],
+          "options": {
+            "jestConfig": "libs/tour-of-heroes/feature-add-hero/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/tour-of-heroes/feature-add-hero/src/**/*.ts",
+              "libs/tour-of-heroes/feature-add-hero/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "feature-dashboard": {
       "projectType": "library",
       "root": "libs/feature-dashboard",
@@ -42,6 +67,31 @@
             "lintFilePatterns": [
               "libs/feature-dashboard/src/**/*.ts",
               "libs/feature-dashboard/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "feature-header": {
+      "projectType": "library",
+      "root": "libs/tour-of-heroes/feature-header",
+      "sourceRoot": "libs/tour-of-heroes/feature-header/src",
+      "prefix": "tour-of-heroes",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/tour-of-heroes/feature-header"],
+          "options": {
+            "jestConfig": "libs/tour-of-heroes/feature-header/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/tour-of-heroes/feature-header/src/**/*.ts",
+              "libs/tour-of-heroes/feature-header/src/**/*.html"
             ]
           }
         }
@@ -234,6 +284,125 @@
         }
       }
     },
+    "tour-of-dogs": {
+      "projectType": "application",
+      "root": "apps/tour-of-dogs",
+      "sourceRoot": "apps/tour-of-dogs/src",
+      "prefix": "tod",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/apps/tour-of-dogs",
+            "index": "apps/tour-of-dogs/src/index.html",
+            "main": "apps/tour-of-dogs/src/main.ts",
+            "polyfills": "apps/tour-of-dogs/src/polyfills.ts",
+            "tsConfig": "apps/tour-of-dogs/tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "apps/tour-of-dogs/src/favicon.ico",
+              "apps/tour-of-dogs/src/assets"
+            ],
+            "styles": ["apps/tour-of-dogs/src/styles.scss"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "apps/tour-of-dogs/src/environments/environment.ts",
+                  "with": "apps/tour-of-dogs/src/environments/environment.prod.ts"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true,
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "tour-of-dogs:build:production"
+            },
+            "development": {
+              "browserTarget": "tour-of-dogs:build:development",
+              "port": 4201
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "tour-of-dogs:build"
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "apps/tour-of-dogs/src/**/*.ts",
+              "apps/tour-of-dogs/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/tour-of-dogs"],
+          "options": {
+            "jestConfig": "apps/tour-of-dogs/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "tour-of-dogs-e2e": {
+      "root": "apps/tour-of-dogs-e2e",
+      "sourceRoot": "apps/tour-of-dogs-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/tour-of-dogs-e2e/cypress.json",
+            "devServerTarget": "tour-of-dogs:serve:development"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "tour-of-dogs:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/tour-of-dogs-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    },
     "tour-of-heroes": {
       "projectType": "application",
       "root": "apps/tour-of-heroes",
@@ -355,56 +524,6 @@
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": ["apps/tour-of-heroes-e2e/**/*.{js,ts}"]
-          }
-        }
-      }
-    },
-    "feature-add-hero": {
-      "projectType": "library",
-      "root": "libs/tour-of-heroes/feature-add-hero",
-      "sourceRoot": "libs/tour-of-heroes/feature-add-hero/src",
-      "prefix": "tour-of-heroes",
-      "architect": {
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/tour-of-heroes/feature-add-hero"],
-          "options": {
-            "jestConfig": "libs/tour-of-heroes/feature-add-hero/jest.config.js",
-            "passWithNoTests": true
-          }
-        },
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": [
-              "libs/tour-of-heroes/feature-add-hero/src/**/*.ts",
-              "libs/tour-of-heroes/feature-add-hero/src/**/*.html"
-            ]
-          }
-        }
-      }
-    },
-    "feature-header": {
-      "projectType": "library",
-      "root": "libs/tour-of-heroes/feature-header",
-      "sourceRoot": "libs/tour-of-heroes/feature-header/src",
-      "prefix": "tour-of-heroes",
-      "architect": {
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/tour-of-heroes/feature-header"],
-          "options": {
-            "jestConfig": "libs/tour-of-heroes/feature-header/jest.config.js",
-            "passWithNoTests": true
-          }
-        },
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": [
-              "libs/tour-of-heroes/feature-header/src/**/*.ts",
-              "libs/tour-of-heroes/feature-header/src/**/*.html"
-            ]
           }
         }
       }

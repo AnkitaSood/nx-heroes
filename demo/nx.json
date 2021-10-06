@@ -15,7 +15,13 @@
     "data-access-heroes": {
       "tags": ["scope:tour-of-heroes", "type:data-access"]
     },
+    "feature-add-hero": {
+      "tags": ["scope:tour-of-heroes", "type:feature"]
+    },
     "feature-dashboard": {
+      "tags": ["scope:tour-of-heroes", "type:feature"]
+    },
+    "feature-header": {
       "tags": ["scope:tour-of-heroes", "type:feature"]
     },
     "feature-hero-details": {
@@ -33,17 +39,18 @@
     "stories": {
       "tags": []
     },
+    "tour-of-dogs": {
+      "tags": ["type:app"]
+    },
+    "tour-of-dogs-e2e": {
+      "tags": [],
+      "implicitDependencies": ["tour-of-dogs"]
+    },
     "tour-of-heroes": {
       "tags": ["scope:tour-of-heroes", "type:app"]
     },
     "tour-of-heroes-e2e": {
       "tags": []
-    },
-    "feature-add-hero": {
-      "tags": ["scope:tour-of-heroes", "type:feature"]
-    },
-    "feature-header": {
-      "tags": ["scope:tour-of-heroes", "type:feature"]
     },
     "ui-kit-heroes-card": {
       "tags": ["scope:tour-of-heroes", "type:ui-kit"]
