@@ -172,6 +172,31 @@
         }
       }
     },
+    "shared-data-access-state-base": {
+      "projectType": "library",
+      "root": "libs/shared/data-access-state-base",
+      "sourceRoot": "libs/shared/data-access-state-base/src",
+      "prefix": "tour-of-heroes",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shared/data-access-state-base"],
+          "options": {
+            "jestConfig": "libs/shared/data-access-state-base/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/data-access-state-base/src/**/*.ts",
+              "libs/shared/data-access-state-base/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "shared-ui-kit": {
       "projectType": "library",
       "root": "libs/shared/ui-kit",

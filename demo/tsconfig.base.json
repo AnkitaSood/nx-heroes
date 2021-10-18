@@ -15,8 +15,14 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@config": [
+        "config/index.ts"
+      ],
       "@shared/data-access-heroes": [
         "libs/shared/data-access-heroes/src/index.ts"
+      ],
+      "@shared/data-access-state-base": [
+        "libs/shared/data-access-state-base/src/index.ts"
       ],
       "@shared/models": ["libs/shared/models"],
       "@tod/data-access-dogs": [

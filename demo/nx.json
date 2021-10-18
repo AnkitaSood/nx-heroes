@@ -33,6 +33,9 @@
     "feature-heroes": {
       "tags": ["scope:tour-of-heroes", "type:feature"]
     },
+    "shared-data-access-state-base": {
+      "tags": ["type:data-access", "scope:shared"]
+    },
     "shared-ui-kit": {
       "tags": ["scope:shared", "type:ui-kit"]
     },

@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
 import { Observable, of } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 import { Hero } from '@shared/models';
-import { StateService } from './state.service';
+import { StateService } from '@shared/data-access-state-base';
 
 interface HeroState {
   heroes: Hero[];

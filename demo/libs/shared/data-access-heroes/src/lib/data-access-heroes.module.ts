@@ -1,19 +1,17 @@
-import {forwardRef, ModuleWithProviders, NgModule} from '@angular/core';
+import { forwardRef, ModuleWithProviders, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeroService } from './hero.service';
-import {NG_VALUE_ACCESSOR} from "@angular/forms";
+import { NG_VALUE_ACCESSOR } from '@angular/forms';
 
 @NgModule({
-  imports: [
-    CommonModule,
-  ],
+  imports: [CommonModule],
   providers: [
     {
       provide: NG_VALUE_ACCESSOR,
       useExisting: forwardRef(() => HeroService),
-      multi: false
-    }
-  ]
+      multi: false,
+    },
+  ],
 })
 export class DataAccessHeroesModule {
   static forRoot(): ModuleWithProviders<DataAccessHeroesModule> {
@@ -23,9 +21,9 @@ export class DataAccessHeroesModule {
         {
           provide: NG_VALUE_ACCESSOR,
           useExisting: forwardRef(() => HeroService),
-          multi: false
-        }
-      ]
-    }
+          multi: false,
+        },
+      ],
+    };
   }
 }
