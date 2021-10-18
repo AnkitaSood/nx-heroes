@@ -18,8 +18,8 @@
       "@config": [
         "config/index.ts"
       ],
-      "@shared/data-access-heroes": [
-        "libs/shared/data-access-heroes/src/index.ts"
+      "@toh/data-access-heroes": [
+        "libs/tour-of-heroes/data-access-heroes/src/index.ts"
       ],
       "@shared/data-access-state-base": [
         "libs/shared/data-access-state-base/src/index.ts"

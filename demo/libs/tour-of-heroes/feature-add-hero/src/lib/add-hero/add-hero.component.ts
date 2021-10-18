@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { Hero } from '@shared/models';
-import { HeroService } from '@shared/data-access-heroes';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { Hero } from '@shared/models';
+import {HeroService} from "@toh/data-access-heroes";
 
 @Component({
   selector: 'tour-of-heroes-add-hero',

@@ -2,21 +2,21 @@
   "version": 1,
   "projects": {
     "data-access-heroes": {
-      "root": "libs/data-access-heroes",
-      "sourceRoot": "libs/data-access-heroes/src",
+      "root": "libs/tour-of-heroes/data-access-heroes",
+      "sourceRoot": "libs/tour-of-heroes/data-access-heroes/src",
       "projectType": "library",
       "architect": {
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["libs/data-access-heroes/**/*.ts"]
+            "lintFilePatterns": ["libs/tour-of-heroes/data-access-heroes/**/*.ts"]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/data-access-heroes"],
+          "outputs": ["coverage/libs/tour-of-heroes/data-access-heroes"],
           "options": {
-            "jestConfig": "libs/data-access-heroes/jest.config.js",
+            "jestConfig": "libs/tour-of-heroes/data-access-heroes/jest.config.js",
             "passWithNoTests": true
           }
         }

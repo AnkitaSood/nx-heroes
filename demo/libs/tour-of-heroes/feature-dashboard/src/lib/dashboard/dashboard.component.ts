@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
-import { Hero } from '@shared/models';
-import { HeroService } from '@shared/data-access-heroes';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+
+import { Hero } from '@shared/models';
+import {HeroService} from "@toh/data-access-heroes";
 
 @Component({
   selector: 'app-dashboard',

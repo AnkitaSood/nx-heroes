@@ -9,10 +9,11 @@ import { InMemoryDataService } from './in-memory-data.service';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
-import {DataAccessHeroesModule} from '@shared/data-access-heroes';
+
 import { FeatureDashboardModule } from '@toh/feature-dashboard';
 import {HeaderModule} from "@toh/feature-header";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {DataAccessHeroesModule} from "@toh/data-access-heroes";
 
 
 @NgModule({
