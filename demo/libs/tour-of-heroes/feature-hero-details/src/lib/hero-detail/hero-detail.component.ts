@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {ActivatedRoute, ParamMap} from '@angular/router';
+import { ActivatedRoute, ParamMap } from '@angular/router';
 import { Location } from '@angular/common';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
 
 import { Hero } from '@shared/models';
-import {HeroService} from "@toh/data-access-heroes";
+import { HeroService } from '@toh/data-access-heroes';
 
 @Component({
   selector: 'app-hero-detail',

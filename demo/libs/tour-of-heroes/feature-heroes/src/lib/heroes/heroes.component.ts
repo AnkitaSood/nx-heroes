@@ -1,9 +1,9 @@
-import {Component} from '@angular/core';
+import { Component } from '@angular/core';
 
-import {Hero} from '@shared/models';
+import { Hero } from '@shared/models';
 
-import {Observable} from 'rxjs';
-import {HeroService} from "@toh/data-access-heroes";
+import { Observable } from 'rxjs';
+import { HeroService } from '@toh/data-access-heroes';
 
 @Component({
   selector: 'app-heroes',
@@ -13,8 +13,7 @@ import {HeroService} from "@toh/data-access-heroes";
 export class HeroesComponent {
   heroes$: Observable<Hero[]> = this.heroService.pluckStateProperty('heroes');
 
-  constructor(private heroService: HeroService) {
-  }
+  constructor(private heroService: HeroService) {}
 
   ngOnInit(): void {
     this.heroService.loadHeroes();

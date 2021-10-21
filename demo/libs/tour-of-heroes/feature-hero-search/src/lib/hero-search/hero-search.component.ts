@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { map, startWith } from 'rxjs/operators'
+import { map, startWith } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 
 import { Hero } from '@shared/models';
-import {HeroService} from "@toh/data-access-heroes";
+import { HeroService } from '@toh/data-access-heroes';
 
 @Component({
   selector: 'app-hero-search',

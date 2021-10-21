@@ -1,3 +1,6 @@
 <h1 class="mat-h1">Favorite Heroes</h1>
 
-<tour-of-heroes-card [hero]="hero" *ngFor="let hero of heroes$ | async"></tour-of-heroes-card>
+<tour-of-heroes-card
+  [hero]="hero"
+  *ngFor="let hero of heroes$ | async"
+></tour-of-heroes-card>

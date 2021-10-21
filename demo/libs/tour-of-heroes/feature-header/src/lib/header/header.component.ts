@@ -1,22 +1,24 @@
-import {Component} from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'tour-of-heroes-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
-  navLinks = [{
-    link: '/dashboard',
-    label: 'Favorites'
-  },
+  navLinks = [
+    {
+      link: '/dashboard',
+      label: 'Favorites',
+    },
     {
       link: '/heroes',
-      label: 'Configure'
+      label: 'Configure',
     },
     {
       link: '/add-new',
-      label: 'Add Hero'
-    }]
-  activeLink= this.navLinks[0].link;
+      label: 'Add Hero',
+    },
+  ];
+  activeLink = this.navLinks[0].link;
 }

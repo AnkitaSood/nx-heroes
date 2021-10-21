@@ -11,10 +11,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { FeatureDashboardModule } from '@toh/feature-dashboard';
-import {HeaderModule} from "@toh/feature-header";
-import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import {DataAccessHeroesModule} from "@toh/data-access-heroes";
-
+import { HeaderModule } from '@toh/feature-header';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DataAccessHeroesModule } from '@toh/data-access-heroes';
 
 @NgModule({
   imports: [
@@ -27,15 +26,13 @@ import {DataAccessHeroesModule} from "@toh/data-access-heroes";
     // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
     // and returns simulated server responses.
     // Remove it when a real server is ready to receive requests.
-    HttpClientInMemoryWebApiModule.forRoot(
-      InMemoryDataService, { dataEncapsulation: false }
-    ),
+    HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {
+      dataEncapsulation: false,
+    }),
     FeatureDashboardModule,
-    HeaderModule
+    HeaderModule,
   ],
-  declarations: [
-    AppComponent,
-  ],
-  bootstrap: [ AppComponent ],
+  declarations: [AppComponent],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

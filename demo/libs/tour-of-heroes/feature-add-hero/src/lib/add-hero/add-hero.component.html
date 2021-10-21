@@ -1,34 +1,75 @@
 <h1 class="mat-h1">Add New Hero</h1>
-<form #addHeroForm='ngForm' name="addHeroForm" class="form-add-hero" (ngSubmit)="add()">
+<form
+  #addHeroForm="ngForm"
+  name="addHeroForm"
+  class="form-add-hero"
+  (ngSubmit)="add()"
+>
   <mat-form-field appearance="outline">
     <mat-label>Name</mat-label>
-    <input matInput required placeholder="eg. Wonder Woman" type="text" name="name" autocomplete="off"
-           [(ngModel)]="hero.name">
+    <input
+      matInput
+      required
+      placeholder="eg. Wonder Woman"
+      type="text"
+      name="name"
+      autocomplete="off"
+      [(ngModel)]="hero.name"
+    />
   </mat-form-field>
-
 
   <mat-form-field appearance="outline">
     <mat-label>Super Powers</mat-label>
-    <input type="text" matInput placeholder="eg. Super human strength" name="superPowers"
-           [(ngModel)]="hero.superPowers">
+    <input
+      type="text"
+      matInput
+      placeholder="eg. Super human strength"
+      name="superPowers"
+      [(ngModel)]="hero.superPowers"
+    />
   </mat-form-field>
 
   <mat-form-field appearance="outline">
     <mat-label>Category</mat-label>
-    <input type="text" matInput placeholder="eg. DC, Marvel etc" name="category" [(ngModel)]="hero.category">
+    <input
+      type="text"
+      matInput
+      placeholder="eg. DC, Marvel etc"
+      name="category"
+      [(ngModel)]="hero.category"
+    />
   </mat-form-field>
 
   <div class="form-radio-options">
-    <label id="fav-hero-label" class="label-radio mat-h3">One of your favorites?</label>
-    <mat-radio-group aria-labelledby="fav-hero-label" [(ngModel)]="hero.isFavHero" name="isFavHero">
+    <label id="fav-hero-label" class="label-radio mat-h3"
+      >One of your favorites?</label
+    >
+    <mat-radio-group
+      aria-labelledby="fav-hero-label"
+      [(ngModel)]="hero.isFavHero"
+      name="isFavHero"
+    >
       <mat-radio-button value="true">Yes</mat-radio-button>
       <mat-radio-button value="false">No</mat-radio-button>
     </mat-radio-group>
   </div>
 
   <div class="btns">
-    <button mat-raised-button color='accent' type="button" (click)="addHeroForm.reset()">Reset
+    <button
+      mat-raised-button
+      color="accent"
+      type="button"
+      (click)="addHeroForm.reset()"
+    >
+      Reset
     </button>
-    <button mat-raised-button color='primary' type="submit" [disabled]="addHeroForm.invalid">Save</button>
+    <button
+      mat-raised-button
+      color="primary"
+      type="submit"
+      [disabled]="addHeroForm.invalid"
+    >
+      Save
+    </button>
   </div>
 </form>

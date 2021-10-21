@@ -1,1 +1,1 @@
-export * from './lib/add-hero/add-hero.module'
+export * from './lib/add-hero/add-hero.module';

@@ -1,5 +1,5 @@
 @use '~@angular/material' as mat;
-@import "variables";
+@import 'variables';
 
 $light-theme-primary-palette: (
   50: #f0e4f0,
@@ -14,8 +14,8 @@ $light-theme-primary-palette: (
   900: #431c5d,
   A100: #ea80fc,
   A200: #e040fb,
-  A400:#d500f9,
-  A700:#aa00ff,
+  A400: #d500f9,
+  A700: #aa00ff,
   contrast: (
     50: $dark-primary-text,
     100: $dark-primary-text,
@@ -31,24 +31,24 @@ $light-theme-primary-palette: (
     A200: $light-primary-text,
     A400: $light-primary-text,
     A700: $light-primary-text,
-  )
+  ),
 );
 
 $light-theme-accent-palette: (
   50: #fef3e1,
-  100:#fee1b5,
+  100: #fee1b5,
   200: #fdcd86,
-  300:#fcb956,
-  400:#fca935,
-  500:#fb9b1f,
-  600:#f7901d,
-  700:#f1801a,
-  800:#ea7118,
+  300: #fcb956,
+  400: #fca935,
+  500: #fb9b1f,
+  600: #f7901d,
+  700: #f1801a,
+  800: #ea7118,
   900: #e05915,
-  A100:#ffd180,
-  A200:#ffab40,
-  A400:#ff9100,
-  A700:#ff6d00,
+  A100: #ffd180,
+  A200: #ffab40,
+  A400: #ff9100,
+  A700: #ff6d00,
   contrast: (
     50: $dark-primary-text,
     100: $dark-primary-text,
@@ -64,24 +64,24 @@ $light-theme-accent-palette: (
     A200: $dark-primary-text,
     A400: $dark-primary-text,
     A700: black,
-  )
+  ),
 );
 
 $light-theme-warn-palette: (
-  50:#fce4e9,
-  100:#f8bcc9,
-  200:#f291a6,
-  300:#ec6783,
-  400:#e54b6a,
-  500:#df3653,
-  600:#cf3151,
-  700:#ba2c4d,
-  800:#a6274a,
-  900:#811e43,
-  A100:#ff8a80,
-  A200:#ff5252,
-  A400:#ff1744,
-  A700:#d50000,
+  50: #fce4e9,
+  100: #f8bcc9,
+  200: #f291a6,
+  300: #ec6783,
+  400: #e54b6a,
+  500: #df3653,
+  600: #cf3151,
+  700: #ba2c4d,
+  800: #a6274a,
+  900: #811e43,
+  A100: #ff8a80,
+  A200: #ff5252,
+  A400: #ff1744,
+  A700: #d50000,
   contrast: (
     50: $dark-primary-text,
     100: $dark-primary-text,
@@ -97,7 +97,7 @@ $light-theme-warn-palette: (
     A200: $light-primary-text,
     A400: $light-primary-text,
     A700: $light-primary-text,
-  )
+  ),
 );
 
 $light-theme-primary: mat.define-palette($light-theme-primary-palette, 900);
@@ -105,10 +105,12 @@ $light-theme-accent: mat.define-palette($light-theme-accent-palette, 700);
 $light-theme-warn: mat.define-palette($light-theme-warn-palette, 700);
 $light-theme-background: #e6e9f0;
 
-$light-theme: mat.define-light-theme((
-  color: (
-    primary: $light-theme-primary,
-    accent: $light-theme-accent,
-    warn: $light-theme-warn,
-  ),
-));
+$light-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $light-theme-primary,
+      accent: $light-theme-accent,
+      warn: $light-theme-warn,
+    ),
+  )
+);
