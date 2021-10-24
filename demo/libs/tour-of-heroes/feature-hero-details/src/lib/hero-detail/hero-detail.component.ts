@@ -29,18 +29,18 @@ export class HeroDetailComponent {
     private snackbar: MatSnackBar
   ) {}
 
-  goBack(): void {
+  onGoBack(): void {
     this.location.back();
   }
 
-  save(hero: Hero): void {
+  onSaveHero(hero: Hero): void {
     if (hero) {
       this.heroService.updateHero(hero);
       this.snackbar.open('Updated hero successfully!');
     }
   }
 
-  delete(hero: Hero): void {
+  onDeleteHero(hero: Hero): void {
     this.heroService.deleteHero(hero.id);
   }
 }

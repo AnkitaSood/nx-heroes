@@ -8,6 +8,7 @@ import { MatInputModule } from '@angular/material/input';
 
 import { DataAccessHeroesModule } from '@toh/data-access-heroes';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
+import { HeroFormModule } from '@toh/ui-kit-heroes';
 
 import {
   MatSnackBarModule,
@@ -32,6 +33,7 @@ const routes: Routes = [
     MatInputModule,
     MatSnackBarModule,
     MatCheckboxModule,
+    HeroFormModule,
   ],
   providers: [
     { provide: MAT_SNACK_BAR_DEFAULT_OPTIONS, useValue: { duration: 2500 } },

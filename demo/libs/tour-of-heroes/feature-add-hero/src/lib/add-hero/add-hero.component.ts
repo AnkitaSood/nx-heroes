@@ -22,10 +22,10 @@ export class AddHeroComponent {
     private snackbar: MatSnackBar
   ) {}
 
-  add(): void {
-    this.heroService.addHero(this.hero);
+  onSaveHero(hero: Hero): void {
+    this.heroService.addHero(hero);
     this.snackbar.open(
-      `${this.hero.name.toUpperCase()} details saved successfully!`
+      `${hero.name.toUpperCase()} details saved successfully!`
     );
   }
 }

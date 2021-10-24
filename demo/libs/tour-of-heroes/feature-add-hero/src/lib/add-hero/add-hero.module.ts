@@ -2,12 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AddHeroComponent } from './add-hero.component';
 import { RouterModule, Routes } from '@angular/router';
-import { MatButtonModule } from '@angular/material/button';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
-import { FormsModule } from '@angular/forms';
-import { MatRadioModule } from '@angular/material/radio';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { HeroFormModule } from '@toh/ui-kit-heroes';
 
 const routes: Routes = [{ path: '', component: AddHeroComponent }];
 
@@ -15,13 +11,9 @@ const routes: Routes = [{ path: '', component: AddHeroComponent }];
   declarations: [AddHeroComponent],
   imports: [
     CommonModule,
-    FormsModule,
     RouterModule.forChild(routes),
-    MatButtonModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatRadioModule,
     MatSnackBarModule,
+    HeroFormModule,
   ],
 })
 export class AddHeroModule {}

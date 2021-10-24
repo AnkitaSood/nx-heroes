@@ -596,17 +596,17 @@
       },
       "tags": []
     },
-    "ui-kit-heroes-card": {
+    "ui-kit-heroes": {
       "projectType": "library",
-      "root": "libs/tour-of-heroes/ui-kit-heroes-card",
-      "sourceRoot": "libs/tour-of-heroes/ui-kit-heroes-card/src",
+      "root": "libs/tour-of-heroes/ui-kit-heroes",
+      "sourceRoot": "libs/tour-of-heroes/ui-kit-heroes/src",
       "prefix": "tour-of-heroes",
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/tour-of-heroes/ui-kit-heroes-card"],
+          "outputs": ["coverage/libs/tour-of-heroes/ui-kit-heroes"],
           "options": {
-            "jestConfig": "libs/tour-of-heroes/ui-kit-heroes-card/jest.config.js",
+            "jestConfig": "libs/tour-of-heroes/ui-kit-heroes/jest.config.js",
             "passWithNoTests": true
           }
         },
@@ -614,8 +614,8 @@
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": [
-              "libs/tour-of-heroes/ui-kit-heroes-card/src/**/*.ts",
-              "libs/tour-of-heroes/ui-kit-heroes-card/src/**/*.html"
+              "libs/tour-of-heroes/ui-kit-heroes/src/**/*.ts",
+              "libs/tour-of-heroes/ui-kit-heroes/src/**/*.html"
             ]
           }
         }
