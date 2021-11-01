@@ -53,15 +53,15 @@
     },
     "feature-dashboard": {
       "projectType": "library",
-      "root": "libs/feature-dashboard",
-      "sourceRoot": "libs/feature-dashboard/src",
+      "root": "libs/tour-of-heroes/feature-dashboard",
+      "sourceRoot": "libs/tour-of-heroes/feature-dashboard/src",
       "prefix": "tour-of-heroes",
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/feature-dashboard"],
+          "outputs": ["coverage/libs/tour-of-heroes/feature-dashboard"],
           "options": {
-            "jestConfig": "libs/feature-dashboard/jest.config.js",
+            "jestConfig": "libs/tour-of-heroes/feature-dashboard/jest.config.js",
             "passWithNoTests": true
           }
         },
@@ -69,8 +69,8 @@
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": [
-              "libs/feature-dashboard/src/**/*.ts",
-              "libs/feature-dashboard/src/**/*.html"
+              "libs/tour-of-heroes/feature-dashboard/src/**/*.ts",
+              "libs/tour-of-heroes/feature-dashboard/src/**/*.html"
             ]
           }
         }
@@ -105,15 +105,15 @@
     },
     "feature-hero-details": {
       "projectType": "library",
-      "root": "libs/feature-hero-details",
-      "sourceRoot": "libs/feature-hero-details/src",
+      "root": "libs/tour-of-heroes/feature-hero-details",
+      "sourceRoot": "libs/tour-of-heroes/feature-hero-details/src",
       "prefix": "tour-of-heroes",
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/feature-hero-details"],
+          "outputs": ["coverage/libs/tour-of-heroes/feature-hero-details"],
           "options": {
-            "jestConfig": "libs/feature-hero-details/jest.config.js",
+            "jestConfig": "libs/tour-of-heroes/feature-hero-details/jest.config.js",
             "passWithNoTests": true
           }
         },
@@ -121,8 +121,8 @@
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": [
-              "libs/feature-hero-details/src/**/*.ts",
-              "libs/feature-hero-details/src/**/*.html"
+              "libs/tour-of-heroes/feature-hero-details/src/**/*.ts",
+              "libs/tour-of-heroes/feature-hero-details/src/**/*.html"
             ]
           }
         }
@@ -157,15 +157,15 @@
     },
     "feature-heroes": {
       "projectType": "library",
-      "root": "libs/feature-heroes",
-      "sourceRoot": "libs/feature-heroes/src",
+      "root": "libs/tour-of-heroes/feature-heroes",
+      "sourceRoot": "libs/tour-of-heroes/feature-heroes/src",
       "prefix": "tour-of-heroes",
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/feature-heroes"],
+          "outputs": ["coverage/libs/tour-of-heroes/feature-heroes"],
           "options": {
-            "jestConfig": "libs/feature-heroes/jest.config.js",
+            "jestConfig": "libs/tour-of-heroes/feature-heroes/jest.config.js",
             "passWithNoTests": true
           }
         },
@@ -173,8 +173,8 @@
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": [
-              "libs/feature-heroes/src/**/*.ts",
-              "libs/feature-heroes/src/**/*.html"
+              "libs/tour-of-heroes/feature-heroes/src/**/*.ts",
+              "libs/tour-of-heroes/feature-heroes/src/**/*.html"
             ]
           }
         }
@@ -440,7 +440,7 @@
           }
         }
       },
-      "tags": ["scope:tour-of-dogs", "type=data-access"]
+      "tags": ["scope:tour-of-dogs", "type:data-access"]
     },
     "tour-of-dogs-e2e": {
       "root": "apps/tour-of-dogs-e2e",

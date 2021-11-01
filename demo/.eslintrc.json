@@ -4,17 +4,38 @@
   "plugins": ["@nrwl/nx"],
   "overrides": [
     {
-      "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+      "files": ["*.ts"],
       "rules": {
         "@nrwl/nx/enforce-module-boundaries": [
           "error",
           {
             "enforceBuildableLibDependency": true,
-            "allow": [],
+            "allow": [
+              "shared/models/**","shared/styles/**"],
             "depConstraints": [
               {
-                "sourceTag": "*",
-                "onlyDependOnLibsWithTags": ["*"]
+                "sourceTag": "type:app",
+                "onlyDependOnLibsWithTags": ["type:ui-kit","type:feature"]
+              },
+              {
+                "sourceTag": "type:feature",
+                "onlyDependOnLibsWithTags": ["type:ui-kit","type:data-access"]
+              },
+              {
+                "sourceTag": "type:ui-kit",
+                "onlyDependOnLibsWithTags": ["type:ui-kit"]
+              },
+              {
+                "sourceTag": "scope:shared",
+                "onlyDependOnLibsWithTags": ["scope:shared"]
+              },
+              {
+                "sourceTag": "scope:tour-of-heroes",
+                "onlyDependOnLibsWithTags": ["scope:tour-of-heroes", "scope:shared"]
+              },
+              {
+                "sourceTag": "scope:tour-of-dogs",
+                "onlyDependOnLibsWithTags": ["scope:tour-of-dogs", "scope:shared"]
               }
             ]
           }
