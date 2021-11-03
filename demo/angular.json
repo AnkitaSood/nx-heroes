@@ -549,10 +549,6 @@
             "lintFilePatterns": [
               "apps/tour-of-heroes/src/**/*.ts",
               "apps/tour-of-heroes/src/**/*.html"
-            ],
-            "tsConfig": [
-              "apps/tour-of-heroes/tsconfig.app.json",
-              "apps/tour-of-heroes/tsconfig.spec.json"
             ]
           }
         },

@@ -11,7 +11,7 @@
           {
             "enforceBuildableLibDependency": true,
             "allow": [
-              "shared/models/**","shared/styles/**"],
+              "@tour-of-heroes/shared/models/**","@tour-of-heroes/shared/styles/**"],
             "depConstraints": [
               {
                 "sourceTag": "type:app",
