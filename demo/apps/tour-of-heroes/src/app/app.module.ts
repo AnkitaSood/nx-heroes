@@ -13,7 +13,6 @@ import { AppComponent } from './app.component';
 import { FeatureDashboardModule } from '@toh/feature-dashboard';
 import { HeaderModule } from '@toh/feature-header';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { DataAccessHeroesModule } from '@toh/data-access-heroes';
 
 @NgModule({
   imports: [
@@ -22,7 +21,6 @@ import { DataAccessHeroesModule } from '@toh/data-access-heroes';
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
-    DataAccessHeroesModule.forRoot(),
     // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
     // and returns simulated server responses.
     // Remove it when a real server is ready to receive requests.

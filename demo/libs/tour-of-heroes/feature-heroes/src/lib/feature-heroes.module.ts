@@ -15,7 +15,7 @@ const routes: Routes = [{ path: '', component: HeroesComponent }];
   imports: [
     CommonModule,
     RouterModule,
-    DataAccessHeroesModule,
+    DataAccessHeroesModule.forRoot(),
     RouterModule.forChild(routes),
     MatButtonModule,
     MatIconModule,

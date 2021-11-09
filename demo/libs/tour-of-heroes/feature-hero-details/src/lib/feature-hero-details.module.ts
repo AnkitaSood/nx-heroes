@@ -26,7 +26,7 @@ const routes: Routes = [
 @NgModule({
   imports: [
     CommonModule,
-    DataAccessHeroesModule,
+    DataAccessHeroesModule.forRoot(),
     FormsModule,
     RouterModule.forChild(routes),
     MatButtonModule,

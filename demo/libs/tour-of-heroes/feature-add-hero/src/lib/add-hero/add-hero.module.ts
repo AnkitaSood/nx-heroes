@@ -4,6 +4,7 @@ import { AddHeroComponent } from './add-hero.component';
 import { RouterModule, Routes } from '@angular/router';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { HeroFormModule } from '@toh/ui-kit-heroes';
+import { DataAccessHeroesModule } from '@toh/data-access-heroes';
 
 const routes: Routes = [{ path: '', component: AddHeroComponent }];
 
@@ -14,6 +15,7 @@ const routes: Routes = [{ path: '', component: AddHeroComponent }];
     RouterModule.forChild(routes),
     MatSnackBarModule,
     HeroFormModule,
+    DataAccessHeroesModule.forRoot(),
   ],
 })
 export class AddHeroModule {}

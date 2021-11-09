@@ -7,6 +7,7 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
+import { DataAccessHeroesModule } from '@toh/data-access-heroes';
 
 @NgModule({
   imports: [
@@ -17,6 +18,7 @@ import { MatInputModule } from '@angular/material/input';
     MatFormFieldModule,
     ReactiveFormsModule,
     MatInputModule,
+    DataAccessHeroesModule.forRoot(),
   ],
   exports: [HeroSearchComponent],
   declarations: [HeroSearchComponent],
