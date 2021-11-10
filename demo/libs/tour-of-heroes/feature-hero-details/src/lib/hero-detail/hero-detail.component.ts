@@ -10,7 +10,7 @@ import { Hero } from '@shared/models';
 import { HeroService } from '@toh/data-access-heroes';
 
 @Component({
-  selector: 'app-hero-detail',
+  selector: 'tour-of-heroes-detail',
   templateUrl: './hero-detail.component.html',
   styleUrls: ['./hero-detail.component.scss'],
 })

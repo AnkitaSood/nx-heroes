@@ -2,11 +2,9 @@ import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { of } from 'rxjs';
 
-import { HeroSearchComponent } from '../../../../feature-hero-search/src/lib/hero-search/hero-search.component';
-import { HeroService } from '../hero.service';
-import { HEROES } from '../mock-heroes';
-
 import { DashboardComponent } from './dashboard.component';
+import {HEROES} from "./mock-heroes";
+import {HeroService} from "@toh/data-access-heroes";
 
 describe('DashboardComponent', () => {
   let component: DashboardComponent;
@@ -19,7 +17,7 @@ describe('DashboardComponent', () => {
       heroService = jasmine.createSpyObj('HeroService', ['getHeroes']);
       getHeroesSpy = heroService.getHeroes.and.returnValue(of(HEROES));
       TestBed.configureTestingModule({
-        declarations: [DashboardComponent, HeroSearchComponent],
+        declarations: [DashboardComponent],
         imports: [RouterTestingModule.withRoutes([])],
         providers: [{ provide: HeroService, useValue: heroService }],
       }).compileComponents();

@@ -7,7 +7,7 @@ import { Hero } from '@shared/models';
 import { HeroService } from '@toh/data-access-heroes';
 
 @Component({
-  selector: 'app-hero-search',
+  selector: 'tour-of-heroes-search',
   templateUrl: './hero-search.component.html',
   styleUrls: ['./hero-search.component.scss'],
 })

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
@@ -10,7 +10,7 @@ import { HeroService } from '@toh/data-access-heroes';
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss'],
 })
-export class DashboardComponent {
+export class DashboardComponent implements OnInit{
   heroes$: Observable<Hero[]> = this.heroService
     .pluckStateProperty('heroes')
     .pipe(map((heroes) => heroes.filter((hero) => hero.isFavHero)));
