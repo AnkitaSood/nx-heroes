@@ -19,7 +19,7 @@
               },
               {
                 "sourceTag": "type:feature",
-                "onlyDependOnLibsWithTags": ["type:ui-kit","type:data-access"]
+                "onlyDependOnLibsWithTags": ["type:ui-kit","type:data-access","scope:shared"]
               },
               {
                 "sourceTag": "type:ui-kit",
