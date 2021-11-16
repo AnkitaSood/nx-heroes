@@ -185,7 +185,7 @@
       "projectType": "library",
       "root": "libs/shared/data-access-state-base",
       "sourceRoot": "libs/shared/data-access-state-base/src",
-      "prefix": "tour-of-heroes",
+      "prefix": "shared",
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
@@ -211,7 +211,7 @@
       "projectType": "library",
       "root": "libs/shared/ui-kit",
       "sourceRoot": "libs/shared/ui-kit/src",
-      "prefix": "tour-of-heroes",
+      "prefix": "shared",
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
@@ -268,7 +268,7 @@
       "projectType": "library",
       "root": "libs/stories",
       "sourceRoot": "libs/stories/src",
-      "prefix": "tour-of-heroes",
+      "prefix": "shared",
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
@@ -473,7 +473,7 @@
       "projectType": "application",
       "root": "apps/tour-of-heroes",
       "sourceRoot": "apps/tour-of-heroes/src",
-      "prefix": "demo",
+      "prefix": "tour-of-heroes",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
