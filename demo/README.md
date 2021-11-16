@@ -12,6 +12,8 @@ To do:
 
 3. Install Nx globally with `npm i -g nx`
 
+At this point, you can run the Tour of Heroes app with `nx serve`. If you want to run Tour of Dogs, some additional setup is required.
+
 4. Go to [thedogapi.com/signup](https://thedogapi.com/signup) and register for an API key.
 
 5. Add a file under `config/` called tour-of-dogs.config.ts
