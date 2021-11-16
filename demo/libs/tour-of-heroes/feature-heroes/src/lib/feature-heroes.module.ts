@@ -5,7 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 
-import { FlipCardModule } from '@toh/shared-ui-kit';
+import {FlipCardModule} from "@shared-ui-kit";
 import { DataAccessHeroesModule } from '@toh/data-access-heroes';
 import { HeroesComponent } from './heroes/heroes.component';
 

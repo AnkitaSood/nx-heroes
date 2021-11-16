@@ -2,10 +2,10 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'tour-of-heroes-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss'],
+  templateUrl: './heroes-header.component.html',
+  styleUrls: ['./heroes-header.component.scss'],
 })
-export class HeaderComponent {
+export class HeroesHeaderComponent {
   navLinks = [
     {
       link: '/dashboard',

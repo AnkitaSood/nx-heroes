@@ -11,7 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { FeatureDashboardModule } from '@toh/feature-dashboard';
-import { HeaderModule } from '@toh/feature-header';
+import { HeroesHeaderModule } from '@toh/feature-header';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
@@ -28,7 +28,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
       dataEncapsulation: false,
     }),
     FeatureDashboardModule,
-    HeaderModule,
+    HeroesHeaderModule,
   ],
   declarations: [AppComponent],
   bootstrap: [AppComponent],
