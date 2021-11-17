@@ -16,10 +16,12 @@
     "baseUrl": ".",
     "paths": {
       "@config": ["config/index.ts"],
+      "@shared-ui-kit": ["libs/shared/ui-kit/src/index.ts"],
       "@shared/data-access-state-base": [
         "libs/shared/data-access-state-base/src/index.ts"
       ],
-      "@shared/models": ["libs/shared/models"],
+      "@shared/models": ["libs/shared/models/src/index.ts"],
+      "@shared/styles": ["libs/shared/styles/src/index.ts"],
       "@tod/data-access-dogs": [
         "libs/tour-of-dogs/data-access-dogs/src/index.ts"
       ],
@@ -44,7 +46,6 @@
       "@toh/feature-heroes": [
         "libs/tour-of-heroes/feature-heroes/src/index.ts"
       ],
-      "@shared-ui-kit": ["libs/shared/ui-kit/src/index.ts"],
       "@toh/ui-kit-heroes": ["libs/tour-of-heroes/ui-kit-heroes/src/index.ts"],
       "@tour-of-heroes/stories": ["libs/stories/src/index.ts"]
     }
