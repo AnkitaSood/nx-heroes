@@ -16,14 +16,18 @@ At this point, you can run the Tour of Heroes app with `nx serve`. If you want t
 
 4. Go to [thedogapi.com/signup](https://thedogapi.com/signup) and register for an API key.
 
-5. Add a file under `config/` called tour-of-dogs.config.ts
+5. Add a file under `config/` called tod-config.ts
 
-6. In your tour-of-dogs.config.ts file, add the following with your api key
+6. In your tod-config.ts file, add the following with your api key
 
 ```typescript
-export const config = {
-  dogs_api_key: 'your api key',
-};
+// TODO: woudn't use aliased import for some reason
+import { TourOfDogsConfig } from '../libs/tour-of-dogs/tod-models/src/index';
+
+export const tourOfDogsConfig: TourOfDogsConfig = {
+  baseUrl: 'https://api.thedogapi.com',
+  apiKey: 'your api key'
+}
 ```
 
 Now you can run:
