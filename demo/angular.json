@@ -524,6 +524,32 @@
       "tags": [],
       "implicitDependencies": ["tour-of-dogs"]
     },
+    "tour-of-dogs-tod-models": {
+      "projectType": "library",
+      "root": "libs/tour-of-dogs/tod-models",
+      "sourceRoot": "libs/tour-of-dogs/tod-models/src",
+      "prefix": "tour-of-heroes",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/tour-of-dogs/tod-models"],
+          "options": {
+            "jestConfig": "libs/tour-of-dogs/tod-models/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/tour-of-dogs/tod-models/src/**/*.ts",
+              "libs/tour-of-dogs/tod-models/src/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": ["type:models", "scope:tour-of-dogs"]
+    },
     "tour-of-heroes": {
       "projectType": "application",
       "root": "apps/tour-of-heroes",

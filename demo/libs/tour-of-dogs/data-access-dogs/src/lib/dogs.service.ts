@@ -1,9 +1,11 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { Inject, Injectable } from '@angular/core';
 import { StateService } from '@shared/data-access-state-base';
+import { DogBreed, TourOfDogsConfig } from 'libs/tour-of-dogs/tod-models/src';
+import { Observable } from 'rxjs';
 
 interface DogsState {
-  dogs: any;
+  breeds: DogBreed[];
   isLoading: boolean;
 }
 
@@ -13,10 +15,19 @@ interface DogsState {
 export class DogsService extends StateService<DogsState> {
   private headers = new HttpHeaders().set(
     'x-api-key',
-    'get from environment injection token'
+    this.config.apiKey
   );
 
-  constructor(private httpClient: HttpClient) {
+  constructor(private httpClient: HttpClient, @Inject('congif') private config: TourOfDogsConfig) {
     super();
   }
+
+  getDogBreeds(): Observable<DogBreed[]> {
+    return this.httpClient.get<DogBreed[]>(
+      `${this.config.baseUrl}/v1/breeds`,
+      { headers: this.headers }
+    )
+  }
+
+
 }

@@ -22,6 +22,10 @@
                 "onlyDependOnLibsWithTags": ["type:ui-kit","type:data-access","scope:shared"]
               },
               {
+                "sourceTag": "type:models",
+                "onlyDependOnLibsWithTags": ["type:models"]
+              },
+              {
                 "sourceTag": "type:ui-kit",
                 "onlyDependOnLibsWithTags": ["type:ui-kit"]
               },

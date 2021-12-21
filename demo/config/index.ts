@@ -1,1 +1,1 @@
-export * from './tour-of-dogs.config';
+export * from './tod-config';
