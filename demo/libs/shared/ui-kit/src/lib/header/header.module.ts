@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header.component';
 import {MatTabsModule} from "@angular/material/tabs";
+import {RouterModule} from "@angular/router";
 
 
 
@@ -9,9 +10,11 @@ import {MatTabsModule} from "@angular/material/tabs";
   declarations: [
     HeaderComponent
   ],
-    imports: [
-        CommonModule,
-        MatTabsModule
-    ]
+  imports: [
+    CommonModule,
+    MatTabsModule,
+    RouterModule
+  ],
+  exports: [HeaderComponent]
 })
 export class HeaderModule { }

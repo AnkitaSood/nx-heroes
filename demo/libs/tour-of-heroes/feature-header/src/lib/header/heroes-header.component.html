@@ -1,13 +1,5 @@
-<!--<nav mat-tab-nav-bar backgroundColor="primary">-->
-<!--  <a-->
-<!--    mat-tab-link-->
-<!--    *ngFor="let navLink of navLinks"-->
-<!--    [routerLink]="navLink.link"-->
-<!--    (click)="activeLink = navLink.link"-->
-<!--    [active]="activeLink == navLink.link"-->
-<!--  >-->
-<!--    {{ navLink.label }}-->
-<!--  </a>-->
-
-<!--  <tour-of-heroes-search mat-tab-link></tour-of-heroes-search>-->
-<!--</nav>-->
+<app-header [headerLinks]="navLinks">
+  <ng-container header-content--other>
+  <tour-of-heroes-search ></tour-of-heroes-search>
+  </ng-container>
+</app-header>

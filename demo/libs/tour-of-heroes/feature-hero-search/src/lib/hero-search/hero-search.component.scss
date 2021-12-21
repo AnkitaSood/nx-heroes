@@ -1,8 +1,11 @@
 @import 'global';
 
 :host {
-  display: inline-flex;
-  margin-left: auto;
+  display: inline-block;
+
+  .mat-icon {
+    vertical-align: middle;
+  }
 
   .field-search {
     width: 20rem;

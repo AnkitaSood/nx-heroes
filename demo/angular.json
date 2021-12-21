@@ -135,6 +135,17 @@
       "sourceRoot": "libs/tour-of-heroes/feature-hero-search/src",
       "prefix": "tour-of-heroes",
       "architect": {
+        "build": {
+          "options": {
+            "stylePreprocessorOptions": {
+              "includePaths": ["libs/shared/styles/src"]
+            },
+            "outputPath": "",
+            "index":,
+            "main": "",
+            "tsConfig": ""
+          }
+        },
         "test": {
           "builder": "@nrwl/jest:jest",
           "outputs": ["coverage/libs/tour-of-heroes/feature-hero-search"],
@@ -265,6 +276,13 @@
       "sourceRoot": "libs/shared/ui-kit/src",
       "prefix": "shared",
       "architect": {
+        "build": {
+          "options": {
+            "stylePreprocessorOptions": {
+              "includePaths": ["libs/shared/styles/src"]
+            }
+          }
+        },
         "test": {
           "builder": "@nrwl/jest:jest",
           "outputs": ["coverage/libs/shared/ui-kit"],

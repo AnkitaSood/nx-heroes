@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {HeaderLinks} from "@shared/models";
 
 @Component({
   selector: 'app-header',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  @Input() headerLinks: HeaderLinks = [];
+  activeLink = this.headerLinks[0]?.link;
 
   ngOnInit(): void {
+    console.table(this.headerLinks);
   }
 
 }

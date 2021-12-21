@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {HeaderLinks} from "@shared/models";
 
 @Component({
   selector: 'tour-of-heroes-header',
@@ -6,7 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./heroes-header.component.scss'],
 })
 export class HeroesHeaderComponent {
-  navLinks = [
+  navLinks: HeaderLinks = [
     {
       link: '/dashboard',
       label: 'Favorites',
@@ -20,5 +21,4 @@ export class HeroesHeaderComponent {
       label: 'Add Hero',
     },
   ];
-  activeLink = this.navLinks[0].link;
 }
