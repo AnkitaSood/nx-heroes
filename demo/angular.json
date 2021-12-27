@@ -141,7 +141,7 @@
               "includePaths": ["libs/shared/styles/src"]
             },
             "outputPath": "",
-            "index":,
+            "index":"",
             "main": "",
             "tsConfig": ""
           }
@@ -280,7 +280,11 @@
           "options": {
             "stylePreprocessorOptions": {
               "includePaths": ["libs/shared/styles/src"]
-            }
+            },
+            "outputPath": "",
+            "index":"",
+            "main": "",
+            "tsConfig": ""
           }
         },
         "test": {
