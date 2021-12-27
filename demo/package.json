@@ -29,7 +29,8 @@
     "update:check": "ng update",
     "workspace-schematic": "nx workspace-schematic",
     "storybook": "nx run stories:storybook",
-    "build-storybook": "nx run stories:build-storybook"
+    "build-storybook": "nx run stories:build-storybook",
+    "chromatic": "npx chromatic --project-token=19358f6e21a7"
   },
   "private": true,
   "dependencies": {
