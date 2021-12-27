@@ -1,0 +1,13 @@
+:host {
+  display: block;
+  cursor: pointer;
+
+  .mat-card-content {
+    .card-content-title {
+      display: inline-block;
+      font-weight: bold;
+    }
+
+    text-transform: capitalize;
+  }
+}

@@ -1,0 +1,61 @@
+<mat-form-field appearance="outline">
+  <mat-label>Name</mat-label>
+  <input
+    matInput
+    required
+    [(ngModel)]="hero.name"
+    placeholder="Hero name"
+    [value]="hero.name"
+    type="text"
+  />
+</mat-form-field>
+
+<mat-form-field appearance="outline">
+  <mat-label>Super Powers</mat-label>
+  <input
+    matInput
+    required
+    [(ngModel)]="hero.superPowers"
+    placeholder="Hero superpowers"
+    type="text"
+    [value]="hero.superPowers.toString()"
+  />
+</mat-form-field>
+
+<mat-form-field appearance="outline">
+  <mat-label>Category</mat-label>
+  <input
+    matInput
+    required
+    [(ngModel)]="hero.category"
+    placeholder="Hero category"
+    [value]="hero.category.toString()"
+    type="text"
+  />
+</mat-form-field>
+
+<mat-checkbox color="primary" [(ngModel)]="hero.isFavHero"
+  >One of your favorites?</mat-checkbox
+>
+
+<div class="btns">
+  <button mat-stroked-button color="primary" (click)="goBack.emit()">
+    go back
+  </button>
+  <button
+    mat-raised-button
+    *ngIf="showDeleteOption"
+    color="accent"
+    (click)="delete(hero)"
+  >
+    Delete
+  </button>
+  <button
+    mat-raised-button
+    color="primary"
+    (click)="save(hero)"
+    [disabled]="!hero.name"
+  >
+    save
+  </button>
+</div>

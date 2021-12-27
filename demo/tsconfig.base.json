@@ -15,10 +15,23 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@shared/data-access-heroes": [
-        "libs/shared/data-access-heroes/src/index.ts"
+      "@config": ["config/index.ts"],
+      "@shared-ui-kit": ["libs/shared/ui-kit/src/index.ts"],
+      "@shared/data-access-state-base": [
+        "libs/shared/data-access-state-base/src/index.ts"
       ],
-      "@shared/models": ["libs/shared/models"],
+      "@shared/models": ["libs/shared/models/src/index.ts"],
+      "@shared/styles": ["libs/shared/styles/src/index.ts"],
+      "@tod/data-access-dogs": [
+        "libs/tour-of-dogs/data-access-dogs/src/index.ts"
+      ],
+      "@tod/tod-models": ["libs/tour-of-dogs/tod-models/src/index.ts"],
+      "@toh/data-access-heroes": [
+        "libs/tour-of-heroes/data-access-heroes/src/index.ts"
+      ],
+      "@toh/feature-add-hero": [
+        "libs/tour-of-heroes/feature-add-hero/src/index.ts"
+      ],
       "@toh/feature-dashboard": [
         "libs/tour-of-heroes/feature-dashboard/src/index.ts"
       ],
@@ -34,14 +47,8 @@
       "@toh/feature-heroes": [
         "libs/tour-of-heroes/feature-heroes/src/index.ts"
       ],
-      "@toh/shared-ui-kit": ["libs/shared/ui-kit/src/index.ts"],
-      "@tour-of-heroes/stories": ["libs/stories/src/index.ts"],
-      "@toh/feature-add-hero": [
-        "libs/tour-of-heroes/feature-add-hero/src/index.ts"
-      ],
-      "@toh/ui-kit-heroes-card": [
-        "libs/tour-of-heroes/ui-kit-heroes-card/src/index.ts"
-      ]
+      "@toh/ui-kit-heroes": ["libs/tour-of-heroes/ui-kit-heroes/src/index.ts"],
+      "@tour-of-heroes/stories": ["libs/stories/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

@@ -1,6 +1,6 @@
-import {moduleMetadata, Story, Meta} from '@storybook/angular';
-import {FlipCardComponent} from './flip-card.component';
-import {MatDividerModule} from "@angular/material/divider";
+import { moduleMetadata, Story, Meta } from '@storybook/angular';
+import { FlipCardComponent } from './flip-card.component';
+import { MatDividerModule } from '@angular/material/divider';
 
 export default {
   title: 'FlipCardComponent',
@@ -8,7 +8,7 @@ export default {
   decorators: [
     moduleMetadata({
       imports: [MatDividerModule],
-    })
+    }),
   ],
 } as Meta<FlipCardComponent>;
 
@@ -25,7 +25,6 @@ export const BasicFlipCard: Story = (args) => ({
 BasicFlipCard.args = {
   title: 'Fancy Card Title',
   'content-title': 'Fancy Card Content Title',
-  details: "Fancy Card Details",
-  'back-content': "Fancy Card Back Side"
-}
-
+  details: 'Fancy Card Details',
+  'back-content': 'Fancy Card Back Side',
+};

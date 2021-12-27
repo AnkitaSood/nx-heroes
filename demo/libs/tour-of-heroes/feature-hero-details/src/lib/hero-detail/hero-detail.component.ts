@@ -1,15 +1,16 @@
 import { Component } from '@angular/core';
-import {ActivatedRoute, ParamMap} from '@angular/router';
+import { ActivatedRoute, ParamMap } from '@angular/router';
 import { Location } from '@angular/common';
-
-import { Hero } from '@shared/models';
-import { HeroService } from '@shared/data-access-heroes';
-import { Observable } from 'rxjs';
 import { MatSnackBar } from '@angular/material/snack-bar';
+
+import { Observable } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
 
+import { Hero } from '@shared/models';
+import { HeroService } from '@toh/data-access-heroes';
+
 @Component({
-  selector: 'app-hero-detail',
+  selector: 'tour-of-heroes-detail',
   templateUrl: './hero-detail.component.html',
   styleUrls: ['./hero-detail.component.scss'],
 })
@@ -28,18 +29,18 @@ export class HeroDetailComponent {
     private snackbar: MatSnackBar
   ) {}
 
-  goBack(): void {
+  onGoBack(): void {
     this.location.back();
   }
 
-  save(hero: Hero): void {
+  onSaveHero(hero: Hero): void {
     if (hero) {
       this.heroService.updateHero(hero);
       this.snackbar.open('Updated hero successfully!');
     }
   }
 
-  delete(hero: Hero): void {
+  onDeleteHero(hero: Hero): void {
     this.heroService.deleteHero(hero.id);
   }
 }

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { Hero } from '@shared/models';
-import { HeroService } from '@shared/data-access-heroes';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { Hero } from '@shared/models';
+import { HeroService } from '@toh/data-access-heroes';
 
 @Component({
   selector: 'tour-of-heroes-add-hero',
@@ -22,10 +22,10 @@ export class AddHeroComponent {
     private snackbar: MatSnackBar
   ) {}
 
-  add(): void {
-    this.heroService.addHero(this.hero);
+  onSaveHero(hero: Hero): void {
+    this.heroService.addHero(hero);
     this.snackbar.open(
-      `${this.hero.name.toUpperCase()} details saved successfully!`
+      `${hero.name.toUpperCase()} details saved successfully!`
     );
   }
 }

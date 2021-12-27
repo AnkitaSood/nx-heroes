@@ -1,31 +1,12 @@
-<ng-container *ngIf="hero$ | async as hero else notfound">
-  <h1 class="mat-h1">{{hero.name}} Details</h1>
+<ng-container *ngIf="hero$ | async as hero; else notfound">
+  <h1 class="mat-h1">{{ hero.name }} Details</h1>
 
-  <mat-form-field appearance="outline">
-    <mat-label>Name</mat-label>
-    <input matInput required [(ngModel)]="hero.name" placeholder="Hero name" [value]="hero.name" type="text">
-  </mat-form-field>
-
-  <mat-form-field appearance="outline">
-    <mat-label>Super Powers</mat-label>
-    <input matInput required [(ngModel)]="hero.superPowers" placeholder="Hero superpowers" type="text"
-           [value]="hero.superPowers.toString()">
-  </mat-form-field>
-
-  <mat-form-field appearance="outline">
-    <mat-label>Category</mat-label>
-    <input matInput required [(ngModel)]="hero.category" placeholder="Hero category" [value]="hero.category.toString()"
-           type="text">
-  </mat-form-field>
-
-    <mat-checkbox color="primary" [(ngModel)]="hero.isFavHero">One of your favorites?</mat-checkbox>
-
-  <div class="btns">
-    <button mat-stroked-button color='primary' (click)="goBack()">go back</button>
-    <button mat-raised-button color='accent' (click)="delete(hero)">Delete
-    </button>
-    <button mat-raised-button color='primary' (click)="save(hero)" [disabled]="!hero.name">save</button>
-  </div>
+  <tour-of-heroes-hero-form
+    [hero]="hero"
+    (saveHero)="onSaveHero($event)"
+    (deleteHero)="onDeleteHero($event)"
+    (goBack)="onGoBack()"
+  ></tour-of-heroes-hero-form>
 </ng-container>
 
 <ng-template #notfound>

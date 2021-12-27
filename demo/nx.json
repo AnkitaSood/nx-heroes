@@ -11,42 +11,35 @@
     "nx.json": "*",
     "tsconfig.base.json": "*"
   },
-  "projects": {
-    "data-access-heroes": {
-      "tags": ["scope:tour-of-heroes", "type:data-access"]
+  "cli": {
+    "defaultCollection": "@nrwl/angular"
+  },
+  "defaultProject": "tour-of-heroes",
+  "generators": {
+    "@nrwl/angular": {
+      "application": {
+        "linter": "eslint"
+      },
+      "library": {
+        "linter": "eslint"
+      },
+      "storybook-configuration": {
+        "linter": "eslint"
+      }
     },
-    "feature-dashboard": {
-      "tags": ["scope:tour-of-heroes", "type:feature"]
+    "@nrwl/angular:application": {
+      "style": "scss",
+      "linter": "eslint",
+      "unitTestRunner": "jest",
+      "e2eTestRunner": "cypress"
     },
-    "feature-hero-details": {
-      "tags": ["scope:tour-of-heroes", "type:feature"]
+    "@nrwl/angular:library": {
+      "style": "scss",
+      "linter": "eslint",
+      "unitTestRunner": "jest"
     },
-    "feature-hero-search": {
-      "tags": ["scope:tour-of-heroes", "type:feature"]
-    },
-    "feature-heroes": {
-      "tags": ["scope:tour-of-heroes", "type:feature"]
-    },
-    "shared-ui-kit": {
-      "tags": ["scope:shared", "type:ui-kit"]
-    },
-    "stories": {
-      "tags": []
-    },
-    "tour-of-heroes": {
-      "tags": ["scope:tour-of-heroes", "type:app"]
-    },
-    "tour-of-heroes-e2e": {
-      "tags": []
-    },
-    "feature-add-hero": {
-      "tags": ["scope:tour-of-heroes", "type:feature"]
-    },
-    "feature-header": {
-      "tags": ["scope:tour-of-heroes", "type:feature"]
-    },
-    "ui-kit-heroes-card": {
-      "tags": ["scope:tour-of-heroes", "type:ui-kit"]
+    "@nrwl/angular:component": {
+      "style": "scss"
     }
   }
 }
