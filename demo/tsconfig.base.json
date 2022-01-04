@@ -25,6 +25,7 @@
       "@tod/data-access-dogs": [
         "libs/tour-of-dogs/data-access-dogs/src/index.ts"
       ],
+      "@tod/feature-header": ["libs/tour-of-dogs/feature-header/src/index.ts"],
       "@tod/tod-models": ["libs/tour-of-dogs/tod-models/src/index.ts"],
       "@toh/data-access-heroes": [
         "libs/tour-of-heroes/data-access-heroes/src/index.ts"
