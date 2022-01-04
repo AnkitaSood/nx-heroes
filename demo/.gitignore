@@ -39,5 +39,5 @@ testem.log
 Thumbs.db
 
 # Super secret config
-config/tod-config.ts
+config/tour-of-dogs.config.ts
 
