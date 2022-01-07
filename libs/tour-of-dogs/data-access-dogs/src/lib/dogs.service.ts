@@ -1,7 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Inject, Injectable } from '@angular/core';
 import { StateService } from '@shared/data-access-state-base';
-import { DogBreed, TourOfDogsConfig } from 'libs/tour-of-dogs/tod-models/src';
+import { DogBreed, TourOfDogsConfig } from '@tod/tod-models';
 import { Observable } from 'rxjs';
 
 interface DogsState {
@@ -13,12 +13,14 @@ interface DogsState {
   providedIn: 'root',
 })
 export class DogsService extends StateService<DogsState> {
-  private headers = new HttpHeaders().set(
-    'x-api-key',
-    this.config.apiKey
-  );
+  private get headers(): HttpHeaders {
+    return new HttpHeaders().set(
+      'x-api-key',
+      this.config.apiKey
+    )
+  }
 
-  constructor(private httpClient: HttpClient, @Inject('congif') private config: TourOfDogsConfig) {
+  constructor(private httpClient: HttpClient, @Inject('config') private config: TourOfDogsConfig) {
     super();
   }
 
@@ -28,6 +30,7 @@ export class DogsService extends StateService<DogsState> {
       { headers: this.headers }
     )
   }
+
 
 
 }
