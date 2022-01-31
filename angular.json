@@ -311,8 +311,7 @@
             "port": 4400,
             "config": {
               "configFolder": "libs/shared/ui-kit/.storybook"
-            },
-            "projectBuildConfig": "shared-ui-kit:build-storybook"
+            }
           },
           "configurations": {
             "ci": {
@@ -328,8 +327,7 @@
             "outputPath": "dist/storybook/shared-ui-kit",
             "config": {
               "configFolder": "libs/shared/ui-kit/.storybook"
-            },
-            "projectBuildConfig": "shared-ui-kit:build-storybook"
+            }
           },
           "configurations": {
             "ci": {
@@ -370,8 +368,7 @@
             "port": 4400,
             "config": {
               "configFolder": "libs/stories/.storybook"
-            },
-            "projectBuildConfig": "stories:build-storybook"
+            }
           },
           "configurations": {
             "ci": {
@@ -387,8 +384,7 @@
             "outputPath": "dist/storybook/stories",
             "config": {
               "configFolder": "libs/stories/.storybook"
-            },
-            "projectBuildConfig": "stories:build-storybook"
+            }
           },
           "configurations": {
             "ci": {
