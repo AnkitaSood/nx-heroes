@@ -3,18 +3,16 @@ import { CommonModule } from '@angular/common';
 import { ShellComponent } from './shell/shell.component';
 import { AppRoutingModule } from './app-routing.module';
 import { DogsHeaderModule } from '@tod/feature-header';
+import { DataAccessDogsModule } from '@tod/data-access-dogs';
 
 @NgModule({
   imports: [
     CommonModule,
     AppRoutingModule,
-    DogsHeaderModule
+    DogsHeaderModule,
+    DataAccessDogsModule.forRoot(),
   ],
-  declarations: [
-    ShellComponent
-  ],
-  exports: [
-    ShellComponent
-  ]
+  declarations: [ShellComponent],
+  exports: [ShellComponent],
 })
 export class FeatureShellModule {}

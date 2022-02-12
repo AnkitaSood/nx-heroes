@@ -25,6 +25,9 @@
       "@tod/data-access-dogs": [
         "libs/tour-of-dogs/data-access-dogs/src/index.ts"
       ],
+      "@tod/feature-dog-breeds": [
+        "libs/tour-of-dogs/feature-dog-breeds/src/index.ts"
+      ],
       "@tod/feature-header": ["libs/tour-of-dogs/feature-header/src/index.ts"],
       "@tod/feature-shell": ["libs/tour-of-dogs/feature-shell/src/index.ts"],
       "@tod/tod-models": ["libs/tour-of-dogs/tod-models/src/index.ts"],

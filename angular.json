@@ -546,6 +546,32 @@
       "tags": [],
       "implicitDependencies": ["tour-of-dogs"]
     },
+    "tour-of-dogs-feature-dog-breeds": {
+      "projectType": "library",
+      "root": "libs/tour-of-dogs/feature-dog-breeds",
+      "sourceRoot": "libs/tour-of-dogs/feature-dog-breeds/src",
+      "prefix": "tod",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/tour-of-dogs/feature-dog-breeds"],
+          "options": {
+            "jestConfig": "libs/tour-of-dogs/feature-dog-breeds/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/tour-of-dogs/feature-dog-breeds/src/**/*.ts",
+              "libs/tour-of-dogs/feature-dog-breeds/src/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": ["scope:tour-of-dogs", "type:feature"]
+    },
     "tour-of-dogs-feature-header": {
       "projectType": "library",
       "root": "libs/tour-of-dogs/feature-header",
