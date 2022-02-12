@@ -3,12 +3,13 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { NG_VALUE_ACCESSOR } from '@angular/forms';
 import { DogsService } from './dogs.service';
-import { tourOfDogsConfig } from '@config'
+import { tourOfDogsConfig } from '@config';
 @NgModule({
   imports: [CommonModule, HttpClientModule],
   providers: [
     {
-      provide: 'config', useValue: tourOfDogsConfig
+      provide: 'config',
+      useValue: tourOfDogsConfig,
     },
     {
       provide: NG_VALUE_ACCESSOR,
