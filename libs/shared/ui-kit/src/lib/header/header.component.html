@@ -3,7 +3,7 @@
      *ngFor="let navLink of headerLinks"
      [routerLink]="navLink.link"
      (click)="activeLink = navLink.link"
-     [active]="activeLink == navLink.link">
+     [active]="activeLink === navLink.link">
     {{navLink.label}}
   </a>
   <div mat-tab-link class="header-content--other">
