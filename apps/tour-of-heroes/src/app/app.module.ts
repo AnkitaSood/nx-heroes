@@ -13,6 +13,7 @@ import { AppComponent } from './app.component';
 import { FeatureDashboardModule } from '@toh/feature-dashboard';
 import { HeroesHeaderModule } from '@toh/feature-header';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MAT_RIPPLE_GLOBAL_OPTIONS} from "@angular/material/core";
 
 @NgModule({
   imports: [
@@ -32,5 +33,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   ],
   declarations: [AppComponent],
   bootstrap: [AppComponent],
+  providers: [
+    {provide: MAT_RIPPLE_GLOBAL_OPTIONS, useValue: {disabled: true}}
+  ],
 })
 export class AppModule {}
