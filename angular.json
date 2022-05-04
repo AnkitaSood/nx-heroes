@@ -368,7 +368,8 @@
             "port": 4400,
             "config": {
               "configFolder": "libs/stories/.storybook"
-            }
+            },
+            "projectBuildConfig": "stories:build-storybook"
           },
           "configurations": {
             "ci": {
