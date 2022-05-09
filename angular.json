@@ -385,6 +385,10 @@
             "outputPath": "dist/storybook/stories",
             "config": {
               "configFolder": "libs/stories/.storybook"
+            },
+            "projectBuildConfig": "stories:build-storybook",
+            "stylePreprocessorOptions": {
+              "includePaths": ["libs/shared/styles/src"]
             }
           },
           "configurations": {

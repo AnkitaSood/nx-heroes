@@ -1,6 +1,6 @@
 @use '@angular/material' as mat;
 
-@import 'global';
+@use 'global' as *;
 
 @include mat.core();
 @include mat.all-component-themes($light-theme);

@@ -1,6 +1,6 @@
 @use '@angular/material' as mat;
 
-@import 'global';
+@use 'global' as *;
 
 :host {
   @include mat.elevation(2);

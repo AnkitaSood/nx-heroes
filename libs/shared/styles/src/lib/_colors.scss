@@ -1,5 +1,12 @@
 @use '@angular/material' as mat;
-@import 'variables';
+
+/*
+  COLOR VARIABLES
+*/
+
+$light-primary-text: white;
+$dark-primary-text: rgba(black, 0.87);
+$container-basic--bg-color: map-get(mat.$grey-palette, 100);
 
 $light-theme-primary-palette: (
   50: #f0e4f0,
