@@ -2,6 +2,10 @@
   display: block;
   cursor: pointer;
 
+  .mat-card {
+    min-width: 15.625rem;
+  }
+
   .mat-card-content {
     .card-content-title {
       display: inline-block;
@@ -9,5 +13,11 @@
     }
 
     text-transform: capitalize;
+  }
+}
+
+:host-context(.row) {
+  .mat-card-content {
+    display: none;
   }
 }
