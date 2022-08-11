@@ -1,4 +1,8 @@
-<tour-of-heroes-header></tour-of-heroes-header>
-<main>
-  <router-outlet></router-outlet>
-</main>
+<div class="theme-switch" [ngClass]="dark === true ? 'dark-theme' : ''">
+  <div class="theme-switch-component"><mat-slide-toggle (toggleChange)="transformTheme()
+    "></mat-slide-toggle></div>
+  <tour-of-heroes-header></tour-of-heroes-header>
+  <main>
+    <router-outlet></router-outlet>
+  </main>
+</div>

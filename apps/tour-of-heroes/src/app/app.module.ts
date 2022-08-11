@@ -14,6 +14,8 @@ import { FeatureDashboardModule } from '@toh/feature-dashboard';
 import { HeroesHeaderModule } from '@toh/feature-header';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MAT_RIPPLE_GLOBAL_OPTIONS} from "@angular/material/core";
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+
 
 @NgModule({
   imports: [
@@ -22,6 +24,7 @@ import {MAT_RIPPLE_GLOBAL_OPTIONS} from "@angular/material/core";
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
+    MatSlideToggleModule,
     // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
     // and returns simulated server responses.
     // Remove it when a real server is ready to receive requests.
