@@ -23,6 +23,11 @@ body {
   background-color: $light-theme-background;
 }
 
+.dark-theme {
+  color: $light-primary-text;
+  background-color: $dark-theme-background;
+}
+
 .error-msg {
   color: map-get($light-theme-warn-palette, 700);
 }
@@ -42,6 +47,11 @@ body {
 .mat-stroked-button {
   line-height: 1.875rem;
 }
+
+.mat-h1 {
+  margin-bottom: 0;
+}
+
 /*
  Custom material component variants
 */

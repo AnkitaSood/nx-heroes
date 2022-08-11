@@ -1,6 +1,24 @@
-<h1 class="mat-h1">All Heroes</h1>
+<header>
+  <h1 class="mat-h1">All Heroes</h1>
+  <mat-button-toggle-group #group="matButtonToggleGroup" value="row">
+    <mat-button-toggle
+            value="column"
+            aria-label="Flex direction column"
+            class="toggle-column"
+    >
+      <mat-icon class="column">table_rows</mat-icon>
+    </mat-button-toggle>
+    <mat-button-toggle
+            value="row"
+            aria-label="Flex direction row"
+            class="toggle-row"
+    >
+      <mat-icon>view_column</mat-icon>
+    </mat-button-toggle>
+  </mat-button-toggle-group>
+</header>
 
-<section class="collection">
+<section class="collection" [class]="group.value">
   <app-flip-card
     *ngFor="let hero of heroes$ | async"
     routerLink="/detail"

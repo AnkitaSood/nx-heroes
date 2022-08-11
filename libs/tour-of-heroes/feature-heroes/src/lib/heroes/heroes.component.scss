@@ -1,9 +1,26 @@
 :host {
-  display: block;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+  }
 
   .collection {
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
+
+    &.column {
+      flex-direction: column;
+    }
+
+    &.row {
+      flex-direction: row;
+    }
   }
 }

@@ -39,3 +39,13 @@
     transform: rotateY(180deg);
   }
 }
+
+:host-context(.column) {
+  width: auto;
+  max-height: 6rem;
+}
+
+:host-context(.dark-theme) {
+  @include mat.elevation(8);
+  background-color: $dark-container-basic--bg-color;
+}
